@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableLanguages extends Migration
+class CreateTableVocabulary extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateTableLanguages extends Migration
      */
     public function up()
     {
-        Schema::create('languages', function (Blueprint $table) {
+        Schema::create('vocabulary', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 100);
-            $table->tinyInteger('enabled');
+            $table->string('translation');
+            $table->tinyInteger('lang_id')->foreign('lang_id')->references('id')->on('languages');
+            $table->integer('term_id')->foreign('term_id')->references('id')->on('terms');
         });
     }
 
@@ -27,6 +28,6 @@ class CreateTableLanguages extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('languages');
+        Schema::dropIfExists('vocabulary');
     }
 }
