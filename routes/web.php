@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 // Route::get('/languages', function () {});
 
-Route::get('/languages', 'LanguagesController@home');
-
 Route::get('/cards/show', 'CardsController@show');
+
+Route::get('/languages', 'LanguagesController@home');
+Route::get('/languages/{language}', 'LanguagesController@show');
