@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/languages', function () {});
+
+Route::get('/languages', 'LanguagesController@home');
+
+Route::get('/cards/show', 'CardsController@show');
