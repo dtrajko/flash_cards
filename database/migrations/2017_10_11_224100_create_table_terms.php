@@ -14,7 +14,7 @@ class CreateTableTerms extends Migration
     public function up()
     {
         Schema::create('terms', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unsigned();
             $table->string('picture');
             $table->string('name');
             $table->timestamps();

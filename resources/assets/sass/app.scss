@@ -6,4 +6,10 @@
 @import "variables";
 
 // Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+$magenta: magenta;
+
+body {
+  color: $magenta;
+}

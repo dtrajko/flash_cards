@@ -14,10 +14,20 @@ class CreateTableVocabulary extends Migration
     public function up()
     {
         Schema::create('vocabulary', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unsigned();
             $table->string('translation');
-            $table->tinyInteger('lang_id')->foreign('lang_id')->references('id')->on('languages');
-            $table->integer('term_id')->foreign('term_id')->references('id')->on('terms');
+            $table->tinyInteger('language_id')
+                ->unsigned()
+                ->index()
+                ->foreign('lang_id')
+                ->references('id')
+                ->on('languages');
+            $table->integer('term_id')
+                ->unsigned()
+                ->index()
+                ->foreign('term_id')
+                ->references('id')
+                ->on('terms');
             $table->timestamps();
         });
     }

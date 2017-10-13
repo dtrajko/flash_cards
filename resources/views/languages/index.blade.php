@@ -1,6 +1,12 @@
+@extends('layout')
+
+@section('content')
+
 <h2>All Languages</h2>
-<ul>
+<ul class="list-group">
 @foreach ($languages as $language)
-    <li>{{ $language->id }} | {{ $language->name }}</li>
+  <li class="list-group-item">{{ $language->id }} | <a href="/languages/{{ $language->id }}">{{ $language->name }}</a></li>
 @endforeach
 </ul>
+
+@stop
