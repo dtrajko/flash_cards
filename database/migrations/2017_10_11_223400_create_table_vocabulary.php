@@ -18,6 +18,7 @@ class CreateTableVocabulary extends Migration
             $table->string('translation');
             $table->tinyInteger('lang_id')->foreign('lang_id')->references('id')->on('languages');
             $table->integer('term_id')->foreign('term_id')->references('id')->on('terms');
+            $table->timestamps();
         });
     }
 

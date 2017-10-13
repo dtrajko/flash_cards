@@ -1,5 +1,5 @@
 <ul>
 @foreach ($languages as $language)
-    <li>{{ $language }}</li>
+    <li>{{ $language->name }}</li>
 @endforeach
 </ul>

@@ -17,6 +17,7 @@ class CreateTableTerms extends Migration
             $table->increments('id');
             $table->string('picture');
             $table->string('name');
+            $table->timestamps();
         });
     }
 
