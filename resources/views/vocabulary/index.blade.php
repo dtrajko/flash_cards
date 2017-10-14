@@ -30,10 +30,18 @@
                     Translation: <input type="text" name="translation" class="form-control" />
                 </div>
                 <div class="form-group" style="text-align: left">
-                    Language ID: <input type="text" name="language_id" class="form-control" />
+                    Language: <select class="form-control" name="language_id">
+                    @foreach($languages as $language)
+                        <option value="{{ $language->id }}">{{ $language->name }}</option>
+                    @endforeach
+                    </select>
                 </div>
                 <div class="form-group" style="text-align: left">
-                    Term ID: <input type="text" name="term_id" class="form-control" />
+                    Term: <select class="form-control" name="term_id">
+                    @foreach($terms as $term)
+                        <option value="{{ $term->id }}">{{ $term->name }}</option>
+                    @endforeach
+                    </select>
                 </div>
                 <div class="form-group">
                     <input type="submit" name="submit" value="Add a Term" class="form-control" />

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Vocabulary;
+use App\Language;
+use App\Term;
 use Illuminate\Http\Request;
 
 class VocabularyController extends Controller
@@ -10,7 +12,13 @@ class VocabularyController extends Controller
     public function index()
     {
         $vocabulary = Vocabulary::all();
-        return view('vocabulary.index')->with(['vocabulary' => $vocabulary]);
+        $languages = Language::getLanguages();
+        $terms = Term::getTerms();
+        return view('vocabulary.index')->with([
+            'vocabulary' => $vocabulary,
+            'languages' => $languages,
+            'terms' => $terms,
+        ]);
     }
 
     public function create(Request $request)

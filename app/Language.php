@@ -10,4 +10,11 @@ class Language extends Model
     {
         $this->save();
     }
+
+    public static function getLanguages()
+    {
+        return self::where('enabled', '1')
+            ->orderBy('name', 'asc')
+            ->get();
+    }
 }
