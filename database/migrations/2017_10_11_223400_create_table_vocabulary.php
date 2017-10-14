@@ -19,7 +19,7 @@ class CreateTableVocabulary extends Migration
             $table->tinyInteger('language_id')
                 ->unsigned()
                 ->index()
-                ->foreign('lang_id')
+                ->foreign('language_id')
                 ->references('id')
                 ->on('languages');
             $table->integer('term_id')

@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Route::get('/', 'MenuController@index');
 
-Route::get('/cards/show', 'CardsController@show');
+Route::get('/cards', 'CardsController@index');
 
 Route::get('/languages', 'LanguagesController@home');
 Route::get('/languages/{language}', 'LanguagesController@show');

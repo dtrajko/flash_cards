@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class CardsController extends Controller
 {
-    public function show()
+    public function index()
     {
-        return view('cards.show');
+        return view('cards.index');
     }
 }

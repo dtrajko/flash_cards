@@ -5744,4 +5744,9 @@ body {
   font-weight: bold;
   color: #141c3d; }
 
+.picture_frame {
+  outline: #FFF solid 0px;
+  padding: 2px;
+  width: 80px; }
+
 /*# sourceMappingURL=app.css.map */

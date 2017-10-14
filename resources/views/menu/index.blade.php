@@ -15,6 +15,7 @@
                 <li class="list-group-item"><a href="/languages">Languages</a></li>
                 <li class="list-group-item"><a href="/terms">Terms</a></li>
                 <li class="list-group-item"><a href="/vocabulary">Vocabulary</a></li>
+                <li class="list-group-item"><a href="/cards">Play Cards</a></li>
             </ul>
 
         </div>
