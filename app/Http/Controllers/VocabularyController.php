@@ -20,10 +20,12 @@ class VocabularyController extends Controller
         $vocabulary->language_id = $request->language_id;
         $vocabulary->term_id = $request->term_id;
         $vocabulary->save();
+        return back();
     }
 
     public function delete(Vocabulary $vocabulary)
     {
         $vocabulary->delete();
+        return back();
     }
 }

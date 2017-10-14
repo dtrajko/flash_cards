@@ -25,11 +25,11 @@
             <h3>Add a new term</h3>
 
             <form method="POST" action="/terms/create">
-                <div class="form-group">
-                    Picture: <input type="text" name="picture" class="form-control" />
-                </div>
                 <div class="form-group" style="text-align: left">
                     Name: <input type="text" name="name" class="form-control" />
+                </div>
+                <div class="form-group">
+                    Picture: <input type="text" name="picture" class="form-control" />
                 </div>
                 <div class="form-group">
                     <input type="submit" name="submit" value="Add a Term" class="form-control" />

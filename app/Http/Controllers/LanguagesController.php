@@ -40,11 +40,12 @@ class LanguagesController extends Controller
         $language->name = $request->name;
         $language->enabled = isset($request->enabled) ? 1 : 0;
         $language->create();
-        redirect('/languages');
+        return back();
     }
 
     public function delete(Language $language)
     {
         $language->delete();
+        return back();
     }
 }

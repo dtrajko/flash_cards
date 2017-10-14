@@ -19,10 +19,12 @@ class TermsController extends Controller
         $term->picture = $request->picture;
         $term->name = $request->name;
         $term->save();
+        return back();
     }
 
     public function delete(Term $term)
     {
         $term->delete();
+        return back();
     }
 }
