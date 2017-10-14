@@ -15,8 +15,8 @@
                 @foreach ($terms as $term)
                     <li class="list-group-item">
                         {{ $term->id }} |
+                        <span class="list_item_main">{{ $term->name }}</span> |
                         {{ $term->picture }} |
-                        <a href="/terms/{{ $term->id }}">{{ $term->name }}</a> |
                         <a href="/terms/delete/{{ $term->id }}">Delete</a>
                     </li>
                 @endforeach

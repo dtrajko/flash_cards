@@ -14,8 +14,8 @@
             <ul class="list-group">
             @foreach ($languages as $language)
               <li class="list-group-item">{{ $language->id }} |
-                  <a href="/languages/{{ $language->id }}">{{ $language->name }}</a> |
-                  {{ $language->enabled  }} |
+                  <a href="/languages/{{ $language->id }}" class="list_item_main">{{ $language->name }}</a> |
+                  {{ $language->enabled ? 'ON' : 'OFF'  }} |
                   <a href="/languages/delete/{{ $language->id }}">Delete</a>
               </li>
             @endforeach
@@ -27,8 +27,8 @@
                 <div class="form-group">
                     Name: <input type="text" name="name" class="form-control" />
                 </div>
-                <div class="form-group" style="text-align: left">
-                    Enabled: <input type="checkbox" name="enabled" class="form-control" />
+                <div class="form-group">
+                    Enabled: <input type="checkbox" name="enabled" />
                 </div>
                 <div class="form-group">
                     <input type="submit" name="submit" value="Add Language" class="form-control" />
