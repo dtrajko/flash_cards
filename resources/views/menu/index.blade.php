@@ -1,5 +1,9 @@
 @extends('layout')
 
+@section('header')
+    Menu
+@stop
+
 @section('content')
 
     <div class="row">

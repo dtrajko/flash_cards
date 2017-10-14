@@ -1,5 +1,9 @@
 @extends('layout')
 
+@section('header')
+    <a href="/">Back to menu</a>
+@stop
+
 @section('content')
 
     <div class="row">
