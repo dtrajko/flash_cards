@@ -11,13 +11,26 @@
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
 
-// Route::get('/languages', function () {});
+Route::get('/', 'MenuController@index');
 
 Route::get('/cards/show', 'CardsController@show');
 
 Route::get('/languages', 'LanguagesController@home');
 Route::get('/languages/{language}', 'LanguagesController@show');
+
+Route::post('/languages/create', 'LanguagesController@create');
+Route::get('/languages/delete/{language}', 'LanguagesController@delete');
+
+Route::get('/terms', 'TermsController@index');
+Route::post('/terms/create', 'TermsController@create');
+Route::get('/terms/delete/{term}', 'TermsController@delete');
+
+Route::get('/vocabulary', 'VocabularyController@index');
+Route::post('/vocabulary/create', 'VocabularyController@create');
+Route::get('/vocabulary/delete/{vocabulary}', 'VocabularyController@delete');
