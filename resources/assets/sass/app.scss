@@ -31,3 +31,15 @@ body {
   padding: 2px;
   width: 80px;
 }
+
+.frame_with_outline {
+  outline: solid thin #8aa6c1;
+}
+
+.option_correct {
+  background-color: #e6ffe6;
+}
+
+.option_incorrect {
+  background-color: #ffe6e6;
+}
