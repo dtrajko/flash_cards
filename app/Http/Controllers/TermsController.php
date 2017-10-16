@@ -17,7 +17,7 @@ class TermsController extends Controller
     public function create(Request $request)
     {
         $picture = $request->file('picture');
-        $picture_new_filename = time() . '.' . $picture->getClientOriginalExtension();
+        $picture_new_filename = time() . '.' . strtolower($picture->getClientOriginalExtension());
         $picture->move(public_path('images/terms'), $picture_new_filename);
 
         $term = new Term;
