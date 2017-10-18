@@ -16,15 +16,13 @@
                 <span class="list_item_main">{{ $language->name }}</span>
             </div>
             @foreach($voc_options as $voc_option)
-                <div @if ($voc_option->option_correct)
-                     class="option_correct"
-                     @else
-                     class="option_incorrect"
-                    @endif
-                     style="outline: solid thin #8aa6c1; display: block; margin: 0 auto; margin-top: 10px; padding: 16px;">
+                <div id="card_option_{{ $term->id }}_{{ $language->id }}_{{ $voc_option->id }}" style="outline: solid thin #8aa6c1; display: block; margin: 0 auto; margin-top: 10px; padding: 16px;">
                     <span class="list_item_main">{{ $voc_option->translation }}</span>
+                    <!-- TermID: {{ $term->id }} LanguageID: {{ $language->id }} VocabularyID: {{ $voc_option->id }} -->
                 </div>
             @endforeach
+            {{ csrf_field() }}
+            <div id="response_msg" style="font-size: large; color: #b90808; font-weight: bold; margin-top: 10px"></div>
         </div>
     </div>
 

@@ -32,5 +32,7 @@ Route::post('/terms/create', 'TermsController@create');
 Route::get('/terms/delete/{term}', 'TermsController@delete');
 
 Route::get('/vocabulary', 'VocabularyController@index');
-Route::post('/vocabulary/create', 'VocabularyController@create');
 Route::get('/vocabulary/delete/{vocabulary}', 'VocabularyController@delete');
+Route::post('/vocabulary/create', 'VocabularyController@create');
+
+Route::post('/vocabulary/verify', 'VocabularyController@verify');

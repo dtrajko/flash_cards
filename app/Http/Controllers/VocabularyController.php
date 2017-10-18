@@ -6,6 +6,7 @@ use App\Vocabulary;
 use App\Language;
 use App\Term;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class VocabularyController extends Controller
 {
@@ -35,5 +36,25 @@ class VocabularyController extends Controller
     {
         $vocabulary->delete();
         return back();
+    }
+
+    public function verify(Request $request)
+    {
+        $term_id = $request->input('term_id');
+        $language_id = $request->input('language_id');
+        $vocabulary_id = $request->input('vocabulary_id');
+
+        $vocabulary_id_db = Vocabulary::select('id')
+            ->where('term_id', $term_id)
+            ->where('language_id', $language_id)
+            ->first()->id;
+
+        $response_msg = ($vocabulary_id_db == $vocabulary_id) ? 'true' : 'false';
+
+        $response = array(
+            'status' => 'success',
+            'msg' => $response_msg,
+        );
+        return response()->json($response);
     }
 }
