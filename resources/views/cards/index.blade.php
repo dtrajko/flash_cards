@@ -16,14 +16,23 @@
                 <span class="list_item_main">{{ $language->name }}</span>
             </div>
             @foreach($voc_options as $voc_option)
-                <div id="card_option_{{ $term->id }}_{{ $language->id }}_{{ $voc_option->id }}" style="outline: solid thin #8aa6c1; display: block; margin: 0 auto; margin-top: 10px; padding: 16px;">
+                <div class="card_option" id="card_option_{{ $term->id }}_{{ $language->id }}_{{ $voc_option->id }}">
                     <span class="list_item_main">{{ $voc_option->translation }}</span>
                     <!-- TermID: {{ $term->id }} LanguageID: {{ $language->id }} VocabularyID: {{ $voc_option->id }} -->
                 </div>
             @endforeach
             {{ csrf_field() }}
-            <div id="response_msg" style="font-size: large; color: #b90808; font-weight: bold; margin-top: 10px"></div>
         </div>
     </div>
+
+    <!-- Begin Modal -->
+    <div id="modal_popup_background" class="modal_popup_background">
+        <div id="modal_popup" class="modal_popup">
+            <div id="modal_popup_message" class="modal_popup_message">
+            </div>
+            <div id="modal_popup_button" class="modal_popup_button">&nbsp;&nbsp;NEXT&nbsp;►</div>
+        </div>
+    </div>
+    <!-- End Modal -->
 
 @stop

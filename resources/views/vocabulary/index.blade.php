@@ -9,6 +9,35 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
 
+            <h3>Add a new entry</h3>
+
+            <form method="POST" action="/vocabulary/create">
+                <div class="form-group">
+                    Translation: <input type="text" name="translation" class="form-control" />
+                </div>
+                <div class="form-group" style="text-align: left">
+                    Language: <select class="form-control" name="language_id">
+                        @foreach($languages as $language)
+                            <option value="{{ $language->id }}">{{ $language->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group" style="text-align: left">
+                    Term: <select class="form-control" name="term_id">
+                        @foreach($terms as $term)
+                            <option value="{{ $term->id }}">{{ $term->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" name="submit" value="Add a Term" class="form-control" />
+                </div>
+
+                {{ csrf_field() }}
+
+            </form>
+
+            <br />
             <h2>Vocabulary</h2>
 
             <ul class="list-group">
@@ -22,34 +51,6 @@
                     </li>
                 @endforeach
             </ul>
-
-            <h3>Add a new entry</h3>
-
-            <form method="POST" action="/vocabulary/create">
-                <div class="form-group">
-                    Translation: <input type="text" name="translation" class="form-control" />
-                </div>
-                <div class="form-group" style="text-align: left">
-                    Language: <select class="form-control" name="language_id">
-                    @foreach($languages as $language)
-                        <option value="{{ $language->id }}">{{ $language->name }}</option>
-                    @endforeach
-                    </select>
-                </div>
-                <div class="form-group" style="text-align: left">
-                    Term: <select class="form-control" name="term_id">
-                    @foreach($terms as $term)
-                        <option value="{{ $term->id }}">{{ $term->name }}</option>
-                    @endforeach
-                    </select>
-                </div>
-                <div class="form-group">
-                    <input type="submit" name="submit" value="Add a Term" class="form-control" />
-                </div>
-
-                {{ csrf_field() }}
-
-            </form>
 
         </div>
     </div>

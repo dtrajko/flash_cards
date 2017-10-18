@@ -9,26 +9,6 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
 
-            <h2>Languages</h2>
-
-            <ul class="list-group">
-            @foreach ($languages as $language)
-              <li class="list-group-item">
-                  <div style="overflow: hidden;">
-                      <div>
-                          {{ $language->id }} |
-                        <a href="/languages/{{ $language->id }}" class="list_item_main">{{ $language->name }}</a> |
-                        {{ $language->enabled ? 'ON' : 'OFF'  }} |
-                        <a href="/languages/delete/{{ $language->id }}">Delete</a>
-                      </div>
-                      <div style="float: right">
-                          <img src="/images/flags/{{ $language->flag }}" width="80px" />
-                      </div>
-                  </div>
-              </li>
-            @endforeach
-            </ul>
-
             <h3>Add a new language</h3>
 
             <form method="POST" action="/languages/create" enctype="multipart/form-data">
@@ -49,6 +29,27 @@
                 {{ csrf_field() }}
 
             </form>
+
+            <br />
+            <h2>Languages</h2>
+
+            <ul class="list-group">
+            @foreach ($languages as $language)
+              <li class="list-group-item @if ($language->enabled == 1) language_enabled @else language_disabled @endif">
+                  <div style="overflow: hidden;">
+                      <div>
+                          {{ $language->id }} |
+                        <a href="/languages/{{ $language->id }}" class="list_item_main">{{ $language->name }}</a> |
+                        {{ $language->enabled ? 'ON' : 'OFF'  }} |
+                        <a href="/languages/delete/{{ $language->id }}">Delete</a>
+                      </div>
+                      <div style="float: right">
+                          <img src="/images/flags/{{ $language->flag }}" width="80px" />
+                      </div>
+                  </div>
+              </li>
+            @endforeach
+            </ul>
 
         </div>
     </div>
