@@ -44,7 +44,7 @@
                         <a href="/languages/delete/{{ $language->id }}">Delete</a>
                       </div>
                       <div style="float: right">
-                          <img src="/images/flags/{{ $language->flag }}" width="80px" />
+                          <img src="/images/flags/{{ $language->flag }}" width="100px" />
                       </div>
                   </div>
               </li>

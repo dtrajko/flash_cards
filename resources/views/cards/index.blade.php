@@ -13,7 +13,7 @@
             </div>
             <div style="display: block; margin: 0 auto; margin-top: 10px">
                 <img src="/images/flags/{{ $language->flag }}" width="100px" />
-                <span class="list_item_main">{{ $language->name }}</span>
+                <span class="list_item_main" style="margin-left: 0.5em">{{ $language->name }}</span>
             </div>
             @foreach($voc_options as $voc_option)
                 <div class="card_option" id="card_option_{{ $term->id }}_{{ $language->id }}_{{ $voc_option->id }}">
