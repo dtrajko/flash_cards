@@ -9,9 +9,6 @@ CREATE TABLE `languages` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `languages` VALUES
-(1,'English','1507986818.jpg',0,'2017-10-14 17:13:38','2017-10-14 17:13:38'),
-(2,'Deutsch','1507986518.jpg',1,'2017-10-14 17:08:38','2017-10-14 17:08:38'),
-(3,'Français','1507986530.jpeg',1,'2017-10-14 17:08:50','2017-10-14 17:08:50');
+INSERT INTO `languages` VALUES (1,'English','1507986818.jpg',0,'2017-10-14 17:13:38','2017-10-14 17:13:38'),(2,'Deutsch','1507986518.jpg',1,'2017-10-14 17:08:38','2017-10-14 17:08:38'),(3,'Français','1507986530.jpeg',1,'2017-10-14 17:08:50','2017-10-14 17:08:50'),(9,'Српски','1507989268.jpg',0,'2017-10-14 17:54:28','2017-10-14 17:54:28');

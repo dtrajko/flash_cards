@@ -10,9 +10,9 @@ use Illuminate\Http\Response;
 
 class VocabularyController extends Controller
 {
-    public function index()
+    public function index(Term $term)
     {
-        $vocabulary = Vocabulary::all();
+        $vocabulary = Vocabulary::all()->sortBy('translation');
         $languages = Language::getLanguages();
         $terms = Term::getTerms();
         return view('vocabulary.index')->with([
