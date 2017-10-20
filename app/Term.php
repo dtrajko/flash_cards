@@ -10,4 +10,14 @@ class Term extends Model
     {
         return self::orderBy('name', 'asc')->get();
     }
+
+    public function voc_items()
+    {
+        return $this->hasMany('App\Vocabulary');
+    }
+
+    public function voc_count()
+    {
+        return count($this->voc_items());
+    }
 }

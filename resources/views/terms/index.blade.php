@@ -40,7 +40,9 @@
                                 <span class="list_item_main">{{ $term->name }}</span> |
                                 {{ $term->picture }} |
                                 <a href="/terms/details/{{ $term->id }}">Edit</a> |
-                                <a href="/terms/delete/{{ $term->id }}">Delete</a>
+                                <a href="/terms/delete/{{ $term->id }}" class="delete_confirm">Delete</a>
+                                <br/>
+                                Vocabulary items: <span style="font-weight: bold; font-size: large;">{{ count($term->voc_items) }}</span>
                             </div>
                             <div style="float: right">
                                 <img src="/images/terms/{{ $term->picture }}" width="80px" />

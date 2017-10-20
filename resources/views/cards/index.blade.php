@@ -1,7 +1,13 @@
 @extends('layout')
 
 @section('header')
-    <a href="/">Back to menu</a>
+    <div style="overflow: hidden">
+        <div style="float: left; line-height: 2em;">
+            <a href="/">Back to menu</a>
+        </div>
+        <div style="float: right; line-height: 1.6em; padding-top: 0.2em">
+            <span style="font-size: 1.5em">Score: {{ $settings['score']->value }} | Best score: {{ $settings['score_total']->value }}</span>
+        </div>
 @stop
 
 @section('content')

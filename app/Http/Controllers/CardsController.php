@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Term;
 use App\Language;
 use App\Vocabulary;
+use App\Settings;
 use Illuminate\Http\Request;
-use \App\Term;
 use \DB as DB;
 
 class CardsController extends Controller
@@ -14,6 +15,11 @@ class CardsController extends Controller
 
     public function index()
     {
+        $settings = [
+            'score' => Settings::where('name', 'score')->first(),
+            'score_total' => Settings::where('name', 'score_total')->first(),
+        ];
+
         $term = Term::inRandomOrder()->first();
         $language = Language::where('enabled', 1)->inRandomOrder()->first();
         $voc_options_random = Vocabulary::select('vocabulary.*')
@@ -44,6 +50,7 @@ class CardsController extends Controller
             'language' => $language,
             'voc_options' => $voc_options,
             'voc_option_correct' => $voc_option_correct,
+            'settings' => $settings,
         ]);
     }
 }

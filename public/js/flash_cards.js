@@ -31,3 +31,7 @@ $("[id^=card_option]").click(function() {
         }
     });
 });
+
+$('.delete_confirm').click(function() {
+    return window.confirm("Are you sure?");
+});

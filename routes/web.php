@@ -37,3 +37,5 @@ Route::get('/vocabulary/delete/{vocabulary}', 'VocabularyController@delete');
 Route::post('/vocabulary/create', 'VocabularyController@create');
 
 Route::post('/vocabulary/verify', 'VocabularyController@verify');
+
+Route::get('/settings/update_score/{outcome}', 'SettingsController@update_score');

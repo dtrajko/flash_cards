@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Vocabulary;
 use App\Language;
 use App\Term;
+use App\Settings;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -50,6 +51,16 @@ class VocabularyController extends Controller
             ->first()->id;
 
         $response_msg = ($vocabulary_id_db == $vocabulary_id) ? 'true' : 'false';
+
+        if ($response_msg == 'true')
+        {
+            // increment current score
+            Settings::update_score(1);
+        } elseif ($response_msg == 'false')
+        {
+            // reset the score
+            Settings::update_score(0);
+        }
 
         $response = array(
             'status' => 'success',
