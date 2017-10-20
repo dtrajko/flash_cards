@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Term;
+use App\Vocabulary;
+use App\Language;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Intervention\Image\Facades\Image;
 
 class TermsController extends Controller
 {
@@ -18,7 +21,9 @@ class TermsController extends Controller
     {
         $picture = $request->file('picture');
         $picture_new_filename = time() . '.' . strtolower($picture->getClientOriginalExtension());
-        $picture->move(public_path('images/terms'), $picture_new_filename);
+        Image::make($picture->getRealPath())
+            ->resize(null, 200, function ($constraint) { $constraint->aspectRatio(); })
+            ->save(public_path('images/terms') . '/' . $picture_new_filename);
 
         $term = new Term;
         $term->picture = $picture_new_filename;
@@ -27,9 +32,17 @@ class TermsController extends Controller
         return back();
     }
 
+    public function details(Term $term)
+    {
+        $vocabulary = Vocabulary::where('term_id', $term->id)->get();
+        $languages = Language::getLanguages();
+        return view('terms.details')->with(['term' => $term, 'vocabulary' => $vocabulary, 'languages' => $languages]);
+    }
+
     public function delete(Term $term)
     {
         File::delete(public_path('images/terms') . '/' . $term->picture);
+        Vocabulary::where('term_id', $term->id)->delete();
         $term->delete();
         return back();
     }

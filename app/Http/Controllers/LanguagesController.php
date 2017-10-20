@@ -4,10 +4,13 @@ namespace App\Http\Controllers;
 
 use DB;
 use App\Language;
+use App\Vocabulary;
 use Illuminate\Contracts\Support\Responsable;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\File;
+use Intervention\Image\Facades\Image;
 
 class LanguagesController extends Controller
 {
@@ -16,7 +19,6 @@ class LanguagesController extends Controller
      */
     public function home()
     {
-        // $languages = DB::table('languages')->get();
         $languages = Language::all();
         return view('languages.index')->with(['languages' => $languages]);
     }
@@ -37,8 +39,10 @@ class LanguagesController extends Controller
     public function create(Request $request)
     {
         $flag = $request->file('flag');
-        $flag_new_filename = time() . '.' . $flag->getClientOriginalExtension();
-        $flag->move(public_path('images/flags'), $flag_new_filename);
+        $flag_new_filename = time() . '.' . strtolower($flag->getClientOriginalExtension());
+        Image::make($flag->getRealPath())
+            ->resize(200, null, function ($constraint) { $constraint->aspectRatio(); })
+            ->save(public_path('images/flags') . '/' . $flag_new_filename);
 
         $language = new Language;
         $language->name = $request->name;
@@ -50,6 +54,8 @@ class LanguagesController extends Controller
 
     public function delete(Language $language)
     {
+        File::delete(public_path('images/flags') . '/' . $language->flag);
+        Vocabulary::where('language_id', $language->id)->delete();
         $language->delete();
         return back();
     }

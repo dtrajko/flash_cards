@@ -29,6 +29,7 @@ Route::get('/languages/delete/{language}', 'LanguagesController@delete');
 
 Route::get('/terms', 'TermsController@index');
 Route::post('/terms/create', 'TermsController@create');
+Route::get('/terms/details/{term}', 'TermsController@details');
 Route::get('/terms/delete/{term}', 'TermsController@delete');
 
 Route::get('/vocabulary', 'VocabularyController@index');

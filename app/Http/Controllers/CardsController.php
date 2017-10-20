@@ -10,7 +10,7 @@ use \DB as DB;
 
 class CardsController extends Controller
 {
-    const OPTIONS_OFFERED = 3;
+    const OPTIONS_OFFERED = 4;
 
     public function index()
     {

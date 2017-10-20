@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('header')
-    <a href="/">Back to menu</a>
+    <a href="/terms">Back to terms</a>
 @stop
 
 @section('content')
@@ -9,7 +9,19 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
 
-            <h3>Add a new entry</h3>
+            <div style="overflow: hidden">
+                <div style="float: left">
+                    {{ $term->id }} |
+                    <span class="list_item_main">{{ $term->name }}</span> |
+                    {{ $term->picture }} |
+                    <a href="/terms/delete/{{ $term->id }}">Delete</a>
+                </div>
+                <div style="float: right">
+                    <img src="/images/terms/{{ $term->picture }}" width="80px" />
+                </div>
+            </div>
+
+            <h3>Add a new vocabulary entry</h3>
 
             <form method="POST" action="/vocabulary/create">
                 <div class="form-group">
@@ -23,12 +35,7 @@
                     </select>
                 </div>
                 <div class="form-group" style="text-align: left">
-                    Term: <select class="form-control" name="term_id">
-                        @foreach($terms as $term)
-                            <option value="{{ $term->id }}">{{ $term->name }}</option>
-                        @endforeach
-                    </select>
-                </div>
+                <input type="hidden" name="term_id" value="{{ $term->id }}">
                 <div class="form-group">
                     <input type="submit" name="submit" value="Add a Vocabulary entry" class="form-control" />
                 </div>
@@ -38,7 +45,7 @@
             </form>
 
             <br />
-            <h2>Vocabulary</h2>
+            <h2>Vocabulary entries</h2>
 
             <ul class="list-group">
                 @foreach ($vocabulary as $voc_item)

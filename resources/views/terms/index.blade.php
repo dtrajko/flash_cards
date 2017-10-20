@@ -39,6 +39,7 @@
                                 {{ $term->id }} |
                                 <span class="list_item_main">{{ $term->name }}</span> |
                                 {{ $term->picture }} |
+                                <a href="/terms/details/{{ $term->id }}">Edit</a> |
                                 <a href="/terms/delete/{{ $term->id }}">Delete</a>
                             </div>
                             <div style="float: right">
