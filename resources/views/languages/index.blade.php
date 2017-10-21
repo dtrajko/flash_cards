@@ -37,10 +37,12 @@
             @foreach ($languages as $language)
               <li class="list-group-item @if ($language->enabled == 1) language_enabled @else language_disabled @endif">
                   <div style="overflow: hidden;">
-                      <div>
+                      <div style="display: inline">
                           {{ $language->id }} |
                           <a href="/languages/{{ $language->id }}" class="list_item_main">{{ $language->name }}</a> |
-                          <div id="language_switch_{{ $language->id }}" class="language_switch @if(!$language->enabled) language_switch_disabled @endif">{{ $language->enabled ? 'ON' : 'OFF'  }}</div> |
+                          <div id="language_switch_{{ $language->id }}" class="language_switch @if(!$language->enabled) language_switch_disabled @endif">
+                              {{ $language->enabled ? 'ON' : 'OFF'  }}
+                          </div> |
                           <a href="/languages/delete/{{ $language->id }}" class="delete_confirm">Delete</a>
                       </div>
                       <div style="float: right">
