@@ -30,9 +30,10 @@ Route::get('/languages/delete/{language}', 'LanguagesController@delete');
 Route::get('/languages/switch_enabled/{language_id}', 'LanguagesController@switch_enabled');
 
 Route::get('/terms', 'TermsController@index');
-Route::post('/terms/create', 'TermsController@create');
 Route::get('/terms/details/{term}', 'TermsController@details');
 Route::get('/terms/delete/{term}', 'TermsController@delete');
+Route::post('/terms/create', 'TermsController@create');
+Route::post('/terms/update/{term}', 'TermsController@update');
 
 Route::get('/vocabulary', 'VocabularyController@index');
 Route::get('/vocabulary/delete/{vocabulary}', 'VocabularyController@delete');

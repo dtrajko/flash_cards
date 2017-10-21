@@ -14,13 +14,32 @@
                     {{ $term->id }} |
                     <span class="list_item_main">{{ $term->name }}</span> |
                     {{ $term->picture }} |
-                    <a href="/terms/delete/{{ $term->id }}">Delete</a>
+                    <a href="/terms/delete/{{ $term->id }}" class="delete_confirm">Delete</a>
                 </div>
                 <div style="float: right">
-                    <img src="/images/terms/{{ $term->picture }}" width="80px" />
+                    <img src="/images/terms/{{ $term->picture }}" width="100px" />
                 </div>
             </div>
 
+            <h3>Edit the term</h3>
+
+            <form method="POST" action="/terms/update/{{ $term->id }}" enctype="multipart/form-data">
+                <div class="form-group" style="text-align: left">
+                    <label>Name:</label>
+                    <input type="text" name="name" value="{{ $term->name }}" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Picture:</label>
+                    <input type="file" name="picture" class="form-control" />
+                </div>
+                <input type="hidden" name="id" value="{{ $term->id }}">
+                {{ csrf_field() }}
+                <div class="form-group">
+                    <input type="submit" name="submit" value="Edit the Term" class="form-control" />
+                </div>
+            </form>
+
+            <br />
             <h3>Add a new vocabulary entry</h3>
 
             <form method="POST" action="/vocabulary/create">
