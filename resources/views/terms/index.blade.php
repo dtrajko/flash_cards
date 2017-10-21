@@ -11,22 +11,22 @@
 
             <h3>Add a new term</h3>
 
-            <form method="POST" action="/terms/create" enctype="multipart/form-data">
-                <div class="form-group" style="text-align: left">
-                    <label>Name:</label>
-                    <input type="text" name="name" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <label>Picture:</label>
-                    <input type="file" name="picture" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <input type="submit" name="submit" value="Add a Term" class="form-control" />
-                </div>
-
-                {{ csrf_field() }}
-
-            </form>
+            <div class="form_frame">
+                <form method="POST" action="/terms/create" enctype="multipart/form-data">
+                    <div class="form-group" style="text-align: left">
+                        <label>Name:</label>
+                        <input type="text" name="name" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Picture:</label>
+                        <input type="file" name="picture" class="form-control" />
+                    </div>
+                    {{ csrf_field() }}
+                    <div class="form-group">
+                        <input type="submit" name="submit" value="Add a Term" class="form-control" />
+                    </div>
+                </form>
+            </div>
 
             <br />
             <h2>Terms</h2>

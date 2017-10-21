@@ -50,6 +50,12 @@ class Settings extends Model
                 self::$score_total->save();
             }
         }
+        elseif ($outcome == -1)
+        {
+            // failure, decrement score by 1
+            self::$score->value--;
+            self::$score->save();
+        }
         elseif ($outcome == 0)
         {
             // failure,reset the score to 0

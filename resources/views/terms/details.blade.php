@@ -23,6 +23,7 @@
 
             <h3>Edit the term</h3>
 
+            <div class="form_frame">
             <form method="POST" action="/terms/update/{{ $term->id }}" enctype="multipart/form-data">
                 <div class="form-group" style="text-align: left">
                     <label>Name:</label>
@@ -38,30 +39,32 @@
                     <input type="submit" name="submit" value="Edit the Term" class="form-control" />
                 </div>
             </form>
+            </div>
 
             <br />
             <h3>Add a new vocabulary entry</h3>
 
-            <form method="POST" action="/vocabulary/create">
-                <div class="form-group">
-                    Translation: <input type="text" name="translation" class="form-control" />
-                </div>
-                <div class="form-group" style="text-align: left">
-                    Language: <select class="form-control" name="language_id">
-                        @foreach($languages as $language)
-                            <option value="{{ $language->id }}">{{ $language->name }}</option>
-                        @endforeach
-                    </select>
-                </div>
-                <div class="form-group" style="text-align: left">
-                <input type="hidden" name="term_id" value="{{ $term->id }}">
-                <div class="form-group">
-                    <input type="submit" name="submit" value="Add a Vocabulary entry" class="form-control" />
-                </div>
-
-                {{ csrf_field() }}
-
-            </form>
+            <div class="form_frame">
+                <form method="POST" action="/vocabulary/create">
+                    <div class="form-group">
+                        Translation: <input type="text" name="translation" class="form-control" />
+                    </div>
+                    <div class="form-group" style="text-align: left">
+                        Language: <select class="form-control" name="language_id">
+                            @foreach($languages as $language)
+                                <option value="{{ $language->id }}">{{ $language->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group" style="text-align: left">
+                        <input type="hidden" name="term_id" value="{{ $term->id }}">
+                        {{ csrf_field() }}
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="submit" value="Add a Vocabulary entry" class="form-control" />
+                    </div>
+                </form>
+            </div>
 
             <br />
             <h2>Vocabulary entries</h2>

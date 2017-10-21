@@ -58,8 +58,10 @@ class VocabularyController extends Controller
             Settings::update_score(1);
         } elseif ($response_msg == 'false')
         {
+            // decrement current score
+            Settings::update_score(-1);
             // reset the score
-            Settings::update_score(0);
+            // Settings::update_score(0);
         }
 
         $response = array(

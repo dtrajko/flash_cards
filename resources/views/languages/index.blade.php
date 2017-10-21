@@ -11,24 +11,24 @@
 
             <h3>Add a new language</h3>
 
-            <form method="POST" action="/languages/create" enctype="multipart/form-data">
-                <div class="form-group">
-                    Name: <input type="text" name="name" class="form-control" />
-                </div>
-                <div class="form-group">
-                    Enabled: <input type="checkbox" name="enabled" />
-                </div>
-                <div class="form-group">
-                    <label>Flag:</label>
-                    <input type="file" name="flag" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <input type="submit" name="submit" value="Add Language" class="form-control" />
-                </div>
-
-                {{ csrf_field() }}
-
-            </form>
+            <div class="form_frame">
+                <form method="POST" action="/languages/create" enctype="multipart/form-data">
+                    <div class="form-group">
+                        Name: <input type="text" name="name" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        Enabled: <input type="checkbox" name="enabled" />
+                    </div>
+                    <div class="form-group">
+                        <label>Flag:</label>
+                        <input type="file" name="flag" class="form-control" />
+                    </div>
+                    {{ csrf_field() }}
+                    <div class="form-group">
+                        <input type="submit" name="submit" value="Add Language" class="form-control" />
+                    </div>
+                </form>
+            </div>
 
             <br />
             <h2>Languages</h2>
