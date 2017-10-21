@@ -42,7 +42,7 @@
             </form>
             </div>
 
-            <div style="height: 0.5em"></div>
+            <div style="height: 1em"></div>
 
             <h3 id="expand_collapse_button_2" class="expand_collapse_button">
                 <span id="expand_collapse_span_2">►</span> Add a new vocabulary entry</h3>
@@ -69,7 +69,8 @@
                 </form>
             </div>
 
-            <br />
+            <div style="height: 1em"></div>
+
             <h3>Vocabulary entries</h3>
 
             <ul class="list-group">
