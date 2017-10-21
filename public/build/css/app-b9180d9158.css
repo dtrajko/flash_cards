@@ -5734,6 +5734,9 @@ button.close {
 body {
   color: green; }
 
+h3 {
+  margin-top: 0.5em; }
+
 .list_item_main {
   font-size: large;
   font-weight: bold;
@@ -5838,8 +5841,21 @@ body {
   color: #e4b9b9; }
 
 .form_frame {
-  padding: 10px;
+  padding: 1em;
   outline: thin dotted #bebebe;
   background-color: seashell; }
+
+.expand_collapse_button {
+  cursor: pointer; }
+
+.expand_collapse_area {
+  display: none; }
+
+.submit_button {
+  background-color: darkslategray;
+  color: lightgreen;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 0; }
 
 /*# sourceMappingURL=app.css.map */

@@ -21,9 +21,10 @@
                 </div>
             </div>
 
-            <h3>Edit the term</h3>
+            <h3 id="expand_collapse_button_1" class="expand_collapse_button">
+                <span id="expand_collapse_span_1">►</span> Edit the term</h3>
 
-            <div class="form_frame">
+            <div class="form_frame expand_collapse_area" id="expand_collapse_area_1">
             <form method="POST" action="/terms/update/{{ $term->id }}" enctype="multipart/form-data">
                 <div class="form-group" style="text-align: left">
                     <label>Name:</label>
@@ -35,16 +36,18 @@
                 </div>
                 <input type="hidden" name="id" value="{{ $term->id }}">
                 {{ csrf_field() }}
-                <div class="form-group">
-                    <input type="submit" name="submit" value="Edit the Term" class="form-control" />
+                <div>
+                    <input type="submit" name="submit" value="Edit the Term" class="form-control submit_button" />
                 </div>
             </form>
             </div>
 
-            <br />
-            <h3>Add a new vocabulary entry</h3>
+            <div style="height: 0.5em"></div>
 
-            <div class="form_frame">
+            <h3 id="expand_collapse_button_2" class="expand_collapse_button">
+                <span id="expand_collapse_span_2">►</span> Add a new vocabulary entry</h3>
+
+            <div class="form_frame expand_collapse_area" id="expand_collapse_area_2">
                 <form method="POST" action="/vocabulary/create">
                     <div class="form-group">
                         Translation: <input type="text" name="translation" class="form-control" />
@@ -60,14 +63,14 @@
                         <input type="hidden" name="term_id" value="{{ $term->id }}">
                         {{ csrf_field() }}
                     </div>
-                    <div class="form-group">
-                        <input type="submit" name="submit" value="Add a Vocabulary entry" class="form-control" />
+                    <div>
+                        <input type="submit" name="submit" value="Add a Vocabulary entry" class="form-control submit_button" />
                     </div>
                 </form>
             </div>
 
             <br />
-            <h2>Vocabulary entries</h2>
+            <h3>Vocabulary entries</h3>
 
             <ul class="list-group">
                 @foreach ($vocabulary as $voc_item)

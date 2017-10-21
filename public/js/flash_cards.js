@@ -56,3 +56,19 @@ $("[id^=language_switch]").click(function() {
         }
     });
 });
+
+$("[id^=expand_collapse_button]").click(function() {
+    var button_id = this.id;
+    var button_id_array = button_id.split('_');
+    var id_number = button_id_array[3];
+    if ($('#expand_collapse_area_' + id_number).css('display') == 'none')
+    {
+        $('#expand_collapse_area_' + id_number).css('display', 'block');
+        $('#expand_collapse_span_' + id_number).text('▼');
+    }
+    else if ($('#expand_collapse_area_' + id_number).css('display') == 'block')
+    {
+        $('#expand_collapse_area_' + id_number).css('display', 'none');
+        $('#expand_collapse_span_' + id_number).text('►');
+    }
+});

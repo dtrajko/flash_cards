@@ -9,9 +9,10 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
 
-            <h3>Add a new language</h3>
+            <h3 id="expand_collapse_button_1" class="expand_collapse_button">
+                <span id="expand_collapse_span_1">►</span> Add a new language</h3>
 
-            <div class="form_frame">
+            <div class="form_frame expand_collapse_area" id="expand_collapse_area_1">
                 <form method="POST" action="/languages/create" enctype="multipart/form-data">
                     <div class="form-group">
                         Name: <input type="text" name="name" class="form-control" />
@@ -24,14 +25,15 @@
                         <input type="file" name="flag" class="form-control" />
                     </div>
                     {{ csrf_field() }}
-                    <div class="form-group">
-                        <input type="submit" name="submit" value="Add Language" class="form-control" />
+                    <div>
+                        <input type="submit" name="submit" value="Add a Language" class="form-control submit_button" />
                     </div>
                 </form>
             </div>
 
-            <br />
-            <h2>Languages</h2>
+            <div style="height: 1em"></div>
+
+            <h3>Languages</h3>
 
             <ul class="list-group">
             @foreach ($languages as $language)

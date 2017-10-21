@@ -9,9 +9,10 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
 
-            <h3>Add a new term</h3>
+            <h3 id="expand_collapse_button_1" class="expand_collapse_button">
+                <span id="expand_collapse_span_1">►</span> Add a new term</h3>
 
-            <div class="form_frame">
+            <div class="form_frame expand_collapse_area" id="expand_collapse_area_1">
                 <form method="POST" action="/terms/create" enctype="multipart/form-data">
                     <div class="form-group" style="text-align: left">
                         <label>Name:</label>
@@ -22,14 +23,15 @@
                         <input type="file" name="picture" class="form-control" />
                     </div>
                     {{ csrf_field() }}
-                    <div class="form-group">
-                        <input type="submit" name="submit" value="Add a Term" class="form-control" />
+                    <div>
+                        <input type="submit" name="submit" value="Add a Term" class="form-control submit_button" />
                     </div>
                 </form>
             </div>
 
-            <br />
-            <h2>Terms</h2>
+            <div style="height: 0.5em"></div>
+
+            <h3>Terms</h3>
 
             <ul class="list-group">
                 @foreach ($terms as $term)
