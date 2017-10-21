@@ -27,6 +27,8 @@ Route::get('/languages/{language}', 'LanguagesController@show');
 Route::post('/languages/create', 'LanguagesController@create');
 Route::get('/languages/delete/{language}', 'LanguagesController@delete');
 
+Route::get('/languages/switch_enabled/{language_id}', 'LanguagesController@switch_enabled');
+
 Route::get('/terms', 'TermsController@index');
 Route::post('/terms/create', 'TermsController@create');
 Route::get('/terms/details/{term}', 'TermsController@details');

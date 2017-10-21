@@ -39,9 +39,9 @@
                   <div style="overflow: hidden;">
                       <div>
                           {{ $language->id }} |
-                        <a href="/languages/{{ $language->id }}" class="list_item_main">{{ $language->name }}</a> |
-                        {{ $language->enabled ? 'ON' : 'OFF'  }} |
-                        <a href="/languages/delete/{{ $language->id }}">Delete</a>
+                          <a href="/languages/{{ $language->id }}" class="list_item_main">{{ $language->name }}</a> |
+                          <div id="language_switch_{{ $language->id }}" class="language_switch @if(!$language->enabled) language_switch_disabled @endif">{{ $language->enabled ? 'ON' : 'OFF'  }}</div> |
+                          <a href="/languages/delete/{{ $language->id }}" class="delete_confirm">Delete</a>
                       </div>
                       <div style="float: right">
                           <img src="/images/flags/{{ $language->flag }}" width="100px" />

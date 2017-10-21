@@ -35,3 +35,17 @@ $("[id^=card_option]").click(function() {
 $('.delete_confirm').click(function() {
     return window.confirm("Are you sure?");
 });
+
+$("[id^=language_switch]").click(function() {
+
+    var button_id = this.id;
+    var button_id_array = button_id.split('_');
+    var language_id = button_id_array[2];
+    $.ajax({
+        type: "GET",
+        url: '/languages/switch_enabled/' + language_id,
+        success: function( msg ) {
+            location.reload();
+        }
+    });
+});

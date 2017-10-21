@@ -38,12 +38,15 @@ class LanguagesController extends Controller
      */
     public function create(Request $request)
     {
+        $flag_new_filename = '';
         $flag = $request->file('flag');
-        $flag_new_filename = time() . '.' . strtolower($flag->getClientOriginalExtension());
-        Image::make($flag->getRealPath())
-            ->resize(200, null, function ($constraint) { $constraint->aspectRatio(); })
-            ->save(public_path('images/flags') . '/' . $flag_new_filename);
-
+        if (isset($flag))
+        {
+            $flag_new_filename = time() . '.' . strtolower($flag->getClientOriginalExtension());
+            Image::make($flag->getRealPath())
+                ->resize(200, null, function ($constraint) { $constraint->aspectRatio(); })
+                ->save(public_path('images/flags') . '/' . $flag_new_filename);
+        }
         $language = new Language;
         $language->name = $request->name;
         $language->enabled = isset($request->enabled) ? 1 : 0;
@@ -58,5 +61,23 @@ class LanguagesController extends Controller
         Vocabulary::where('language_id', $language->id)->delete();
         $language->delete();
         return back();
+    }
+
+    public function switch_enabled($language_id)
+    {
+        $output = 'NULL';
+        if (is_numeric($language_id))
+        {
+            $language = Language::where('id', $language_id)->first();
+            $language->enabled = $language->enabled ? 0 : 1;
+            $language->save();
+            $output = $language->enabled;
+        }
+
+        $response = array(
+            'status' => 'success',
+            'msg' => $output,
+        );
+        return response()->json($response);
     }
 }

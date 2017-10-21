@@ -115,3 +115,16 @@ body {
 .language_disabled {
   background-color: #DDD;
 }
+
+.language_switch {
+  background-color: #99cb84;
+  padding: 5px;
+  display: inline;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.language_switch_disabled {
+  background-color: #a94442;
+  color: #e4b9b9;
+}
