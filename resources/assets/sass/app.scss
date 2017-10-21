@@ -108,7 +108,8 @@ h3 {
   font-size: xx-large;
   font-weight: bold;
   text-align: center;
-  outline: thin solid #235c23;
+  // outline: thin solid #235c23;
+  border-radius: 10px;
 }
 /* End Modal */
 
@@ -155,4 +156,20 @@ h3 {
   font-weight: bold;
   border-radius: 10px;
   padding: 0;
+}
+
+.pagination {
+  margin: 0;
+}
+
+.thumb_outer_div {
+  float: right;
+  width: 80px;
+  padding: 2px;
+  border: thin solid #999
+}
+
+.thumb_inner_div {
+  overflow: hidden;
+  text-align: center;
 }

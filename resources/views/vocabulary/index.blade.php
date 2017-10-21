@@ -54,6 +54,8 @@
                 @endforeach
             </ul>
 
+            <?php echo $vocabulary->render(); ?>
+
         </div>
     </div>
 

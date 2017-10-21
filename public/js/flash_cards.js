@@ -72,3 +72,4 @@ $("[id^=expand_collapse_button]").click(function() {
         $('#expand_collapse_span_' + id_number).text('►');
     }
 });
+

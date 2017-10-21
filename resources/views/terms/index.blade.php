@@ -29,7 +29,7 @@
                 </form>
             </div>
 
-            <div style="height: 0.5em"></div>
+            <div style="height: 1em"></div>
 
             <h3>Terms</h3>
 
@@ -46,13 +46,17 @@
                                 <br/>
                                 Vocabulary items: <span style="font-weight: bold; font-size: large;">{{ count($term->voc_items) }}</span>
                             </div>
-                            <div style="float: right">
-                                <img src="/images/terms/{{ $term->picture }}" width="80px" />
+                            <div class="thumb_outer_div">
+                                <div class="thumb_inner_div">
+                                    <img src="/images/terms/{{ $term->picture }}" height="60px" />
+                                </div>
                             </div>
                         </div>
                     </li>
                 @endforeach
             </ul>
+
+            <?php echo $terms->render(); ?>
 
         </div>
     </div>

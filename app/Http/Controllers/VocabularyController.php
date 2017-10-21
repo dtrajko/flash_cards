@@ -8,12 +8,13 @@ use App\Term;
 use App\Settings;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\DB;
 
 class VocabularyController extends Controller
 {
     public function index(Term $term)
     {
-        $vocabulary = Vocabulary::all()->sortBy('translation');
+        $vocabulary = Vocabulary::select()->orderBy('translation', 'asc')->paginate(10);
         $languages = Language::getLanguages();
         $terms = Term::getTerms();
         return view('vocabulary.index')->with([

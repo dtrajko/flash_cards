@@ -15,7 +15,7 @@ class TermsController extends Controller
 {
     public function index()
     {
-        $terms = Term::all()->sortBy('name');
+        $terms = Term::select()->orderBy('name', 'asc')->paginate(6);
 
         return view('terms.index')->with(['terms' => $terms]);
     }
