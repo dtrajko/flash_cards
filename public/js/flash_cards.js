@@ -1,5 +1,10 @@
 // flash_cards.js
 
+var soundSuccess = document.createElement('audio');
+var soundFailure = document.createElement('audio');
+soundSuccess.setAttribute('src', '/sounds/success.mp3');
+soundFailure.setAttribute('src', '/sounds/failure_02.wav');
+
 $("[id^=card_option]").css('cursor', 'pointer');
 
 $("[id^=card_option]").click(function() {
@@ -22,9 +27,11 @@ $("[id^=card_option]").click(function() {
                 location.reload();
             });
             if (msg_text == 'true') {
+                soundSuccess.play();
                 $('#modal_popup_message').css('color', 'green');
                 $('#modal_popup_message').text('Your answer is correct!');
             } else if (msg_text == 'false') {
+                soundFailure.play();
                 $('#modal_popup_message').css('color', 'red');
                 $('#modal_popup_message').text('Your answer is incorrect.');
             }

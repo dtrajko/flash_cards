@@ -73,7 +73,7 @@
                         <span class="vocabulary_translation">{{ $voc_item->translation }}</span> |
                         {{ $voc_item->term->name }} |
                         {{ $voc_item->language->name }} |
-                        <a href="/vocabulary/delete/{{ $voc_item->id }}">Delete</a>
+                        <a href="/vocabulary/delete/{{ $voc_item->id }}" class="delete_confirm">Delete</a>
                     </li>
                 @endforeach
             </ul>
