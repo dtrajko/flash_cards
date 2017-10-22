@@ -40,7 +40,7 @@
 
             <div style="height: 0.5em"></div>
 
-            <h3>Vocabulary</h3>
+            <h3>Vocabulary ({{ $voc_count }})</h3>
 
             <ul class="list-group">
                 @foreach ($vocabulary as $voc_item)

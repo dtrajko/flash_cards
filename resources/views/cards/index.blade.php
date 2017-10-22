@@ -17,7 +17,7 @@
         <div class="flash_card">
             <div class="row">
                 <div style="text-align: center;">
-                    <div style="outline: solid thin #8aa6c1; display: inline-block; margin: 0 auto; padding: 10px;">
+                    <div class="image_frame">
                         <img src="/images/terms/{{ $term->picture }}" height="200px" />
                     </div>
                     <div style="display: block; margin: 0 auto; margin-top: 10px">

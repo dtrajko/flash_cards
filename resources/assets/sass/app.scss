@@ -69,8 +69,8 @@ h3 {
 }
 
 .flash_card_frame {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-top: 0px;
 }
 
@@ -181,12 +181,27 @@ h3 {
 
 .thumb_outer_div {
   float: right;
-  width: 80px;
   padding: 2px;
-  border: thin solid #999
+  border: thin solid #d3e0e9;
 }
 
 .thumb_inner_div {
+  width: 80px;
+  height: 80px;
+  background-size: 80px;
+  background-repeat: no-repeat;
   overflow: hidden;
+  background-position: center;
   text-align: center;
+}
+
+.thumb_list_item {
+  padding: 10px;
+}
+
+.image_frame {
+  outline: solid thin #8aa6c1;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 10px;
 }

@@ -16,7 +16,7 @@
                     {{ $term->picture }} |
                     <a href="/terms/delete/{{ $term->id }}" class="delete_confirm">Delete</a>
                 </div>
-                <div style="float: right">
+                <div style="float: right" class="thumb_outer_div">
                     <img src="/images/terms/{{ $term->picture }}" width="100px" />
                 </div>
             </div>

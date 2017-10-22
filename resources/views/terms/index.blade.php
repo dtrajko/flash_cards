@@ -31,11 +31,11 @@
 
             <div style="height: 1em"></div>
 
-            <h3>Terms</h3>
+            <h3>Terms ({{ $terms_count }})</h3>
 
             <ul class="list-group">
                 @foreach ($terms as $term)
-                    <li class="list-group-item">
+                    <li class="list-group-item thumb_list_item">
                         <div style="overflow: hidden;">
                             <div style="float: left">
                                 {{ $term->id }} |
@@ -47,9 +47,11 @@
                                 Vocabulary items: <span style="font-weight: bold; font-size: large;">{{ count($term->voc_items) }}</span>
                             </div>
                             <div class="thumb_outer_div">
-                                <div class="thumb_inner_div">
-                                    <img src="/images/terms/{{ $term->picture }}" height="60px" />
-                                </div>
+                                <a href="/terms/details/{{ $term->id }}">
+                                    <div class="thumb_inner_div" style="background-image: url('/images/terms/{{ $term->picture }}');">
+                                        <!-- <img src="/images/terms/{{ $term->picture }}" height="60px" /> -->
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </li>

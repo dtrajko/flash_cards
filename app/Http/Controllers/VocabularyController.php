@@ -15,10 +15,12 @@ class VocabularyController extends Controller
     public function index(Term $term)
     {
         $vocabulary = Vocabulary::select()->orderBy('translation', 'asc')->paginate(10);
+        $voc_count = Vocabulary::count();
         $languages = Language::getLanguages();
         $terms = Term::getTerms();
         return view('vocabulary.index')->with([
             'vocabulary' => $vocabulary,
+            'voc_count' => $voc_count,
             'languages' => $languages,
             'terms' => $terms,
         ]);

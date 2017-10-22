@@ -15,9 +15,10 @@ class TermsController extends Controller
 {
     public function index()
     {
+        $terms_count = Term::count();
         $terms = Term::select()->orderBy('name', 'asc')->paginate(6);
 
-        return view('terms.index')->with(['terms' => $terms]);
+        return view('terms.index')->with(['terms' => $terms, 'terms_count' => $terms_count]);
     }
 
     public function create(Request $request)
