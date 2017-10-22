@@ -8,18 +8,15 @@
         <div style="float: right; line-height: 1.6em; padding-top: 0.2em">
             <span style="font-size: 1.5em">Score: {{ $settings['score']->value }} | Best score: {{ $settings['score_total']->value }}</span>
         </div>
+    </div>
 @stop
 
 @section('content')
 
-    <div id="flash_card">
-        <div class="front">
-            <!-- empty -->
-        </div>
-        <div class="back">
-
+    <div class="col-md-6 col-md-offset-3 flash_card_frame">
+        <div class="flash_card">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3" style="text-align: center;">
+                <div style="text-align: center;">
                     <div style="outline: solid thin #8aa6c1; display: inline-block; margin: 0 auto; padding: 10px;">
                         <img src="/images/terms/{{ $term->picture }}" height="200px" />
                     </div>
@@ -36,7 +33,6 @@
                     {{ csrf_field() }}
                 </div>
             </div>
-
         </div>
     </div>
 

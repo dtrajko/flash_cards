@@ -5766,8 +5766,21 @@ h3 {
   outline: solid thin #8aa6c1;
   display: block;
   margin: 0 auto;
-  margin-top: 10px;
-  padding: 16px; }
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 1em;
+  padding: 1em; }
+
+.flash_card {
+  padding: 15px;
+  background-color: whitesmoke;
+  outline: thin solid #666;
+  box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.5); }
+
+.flash_card_frame {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 0px; }
 
 /* Begin Modal */
 .modal_popup_background {
