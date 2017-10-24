@@ -54,6 +54,10 @@ class Settings extends Model
         {
             // failure, decrement score by 1
             self::$score->value--;
+            if (self::$score->value < 0)
+            {
+                self::$score->value = 0;
+            }
             self::$score->save();
         }
         elseif ($outcome == 0)
