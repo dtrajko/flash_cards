@@ -9,6 +9,8 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
 
+            <div class="page_section_separator"></div>
+
             <h3 id="expand_collapse_button_1" class="expand_collapse_button">
                 <span id="expand_collapse_span_1">►</span> Add a new entry</h3>
 
@@ -54,6 +56,7 @@
                 @endforeach
             </ul>
 
+            <div class="page_section_separator"></div>
             <?php echo $vocabulary->render(); ?>
 
         </div>

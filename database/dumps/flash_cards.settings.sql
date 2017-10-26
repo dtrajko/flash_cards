@@ -10,4 +10,4 @@ CREATE TABLE `settings` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `settings` VALUES (1,'score','0','2017-10-22 20:28:25','2017-10-24 22:12:32'),(2,'score_total','74','2017-10-22 20:28:25','2017-10-24 07:08:03');
+INSERT INTO `settings` VALUES (1,'score','0','2017-10-22 20:28:25','2017-10-26 12:22:05'),(2,'score_total','107','2017-10-22 20:28:25','2017-10-26 01:22:31');

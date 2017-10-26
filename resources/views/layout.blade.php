@@ -13,9 +13,9 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3" style="padding-top:16px">
+                <div class="col-md-6 col-md-offset-3 bootstrap-col-override">
                     <ul class="list-group">
-                        <li class="list-group-item">
+                        <li class="list-group-item menu_bar_item">
                             @yield('header')
                         </li>
                     </ul>

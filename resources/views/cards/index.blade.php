@@ -2,11 +2,11 @@
 
 @section('header')
     <div style="overflow: hidden">
-        <div style="float: left; line-height: 2em;">
+        <div style="float: left; line-height: 1.6em; padding-top: 0.2em">
             <a href="/">Back to menu</a>
         </div>
         <div style="float: right; line-height: 1.6em; padding-top: 0.2em">
-            <span style="font-size: 1.5em">Score: {{ $settings['score']->value }} | Best score: {{ $settings['score_total']->value }}</span>
+            <span class="score_bar">Score: {{ $settings['score']->value }} | Best score: {{ $settings['score_total']->value }}</span>
         </div>
     </div>
 @stop
@@ -18,11 +18,11 @@
             <div class="row">
                 <div style="text-align: center;">
                     <div class="image_frame">
-                        <img src="/images/terms/{{ $term->picture }}" height="200px" />
+                        <img src="/images/terms/{{ $term->picture }}" height="150px" />
                     </div>
-                    <div style="display: block; margin: 0 auto; margin-top: 10px">
-                        <img src="/images/flags/{{ $language->flag }}" width="100px" />
-                        <span class="list_item_main" style="margin-left: 0.5em">{{ $language->name }}</span>
+                    <div class="language_bar">
+                        <img src="/images/flags/{{ $language->flag }}" width="60px" />
+                        <span class="list_item_main" style="margin-left: 0.3em">{{ $language->name }}</span>
                     </div>
                     @foreach($voc_options as $voc_option)
                         <div class="card_option" id="card_option_{{ $term->id }}_{{ $language->id }}_{{ $voc_option->id }}">
