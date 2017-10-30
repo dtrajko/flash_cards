@@ -43,6 +43,10 @@ $('.delete_confirm').click(function() {
     return window.confirm("Are you sure?");
 });
 
+$('.delete_confirm_voc').click(function() {
+    return window.confirm("Are you sure?");
+});
+
 $("[id^=language_switch]").click(function() {
 
     var button_id = this.id;
@@ -71,4 +75,8 @@ $("[id^=expand_collapse_button]").click(function() {
         $('#expand_collapse_area_' + id_number).css('display', 'none');
         $('#expand_collapse_span_' + id_number).text('►');
     }
+});
+
+$('#history_back').click(function() {
+    window.history.back();
 });

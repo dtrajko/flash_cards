@@ -38,7 +38,8 @@ Route::post('/terms/update/{term}', 'TermsController@update');
 Route::get('/vocabulary', 'VocabularyController@index');
 Route::get('/vocabulary/delete/{vocabulary}', 'VocabularyController@delete');
 Route::post('/vocabulary/create', 'VocabularyController@create');
-
 Route::post('/vocabulary/verify', 'VocabularyController@verify');
+Route::get('/vocabulary/display/{vocabulary}', 'VocabularyController@display');
+Route::post('/vocabulary/update/{vocabulary}', 'VocabularyController@update');
 
 Route::get('/settings/update_score/{outcome}', 'SettingsController@update_score');

@@ -73,4 +73,23 @@ class VocabularyController extends Controller
         );
         return response()->json($response);
     }
+
+    public function display(Vocabulary $vocabulary)
+    {
+        $terms = Term::getTerms();
+        $languages = Language::getLanguages();
+        return view('vocabulary.display')->with(['vocabulary' => $vocabulary, 'languages' => $languages, 'terms' => $terms]);
+    }
+
+    public function update(Vocabulary $vocabulary, Request $request)
+    {
+        if (!empty($request->translation) && !empty($request->term_id) && !empty($request->language_id))
+        {
+            $vocabulary->translation = $request->translation;
+            $vocabulary->term_id = $request->term_id;
+            $vocabulary->language_id = $request->language_id;
+        }
+        $vocabulary->save();
+        return back();
+    }
 }
