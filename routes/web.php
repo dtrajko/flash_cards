@@ -20,6 +20,7 @@ Route::get('/', function () {
 Route::get('/', 'MenuController@index');
 
 Route::get('/cards', 'CardsController@index');
+Route::get('/cards/json', 'CardsController@json');
 
 Route::get('/languages', 'LanguagesController@home');
 Route::get('/languages/{language}', 'LanguagesController@show');
