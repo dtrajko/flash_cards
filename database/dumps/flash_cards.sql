@@ -42,7 +42,7 @@ CREATE TABLE `settings` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `settings` VALUES (1,'score','0','2017-10-22 20:28:25','2017-11-21 20:04:05');
+INSERT INTO `settings` VALUES (1,'score','0','2017-10-22 20:28:25','2017-11-26 07:52:49');
 INSERT INTO `settings` VALUES (2,'score_total','500','2017-10-22 20:28:25','2017-11-05 18:05:06');
 DROP TABLE IF EXISTS `terms`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -54,10 +54,10 @@ CREATE TABLE `terms` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=132 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=135 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 INSERT INTO `terms` VALUES (3,'1508618234.jpg','ball','2017-10-14 12:18:48','2017-10-22 00:37:14');
-INSERT INTO `terms` VALUES (5,'1507970448.jpg','fork','2017-10-14 12:40:48','2017-10-14 12:40:48');
+INSERT INTO `terms` VALUES (5,'1511660456.jpg','fork','2017-10-14 12:40:48','2017-11-26 06:40:56');
 INSERT INTO `terms` VALUES (6,'1508564327.jpg','window','2017-10-14 12:42:14','2017-10-21 09:38:47');
 INSERT INTO `terms` VALUES (7,'1507970632.jpg','door','2017-10-14 12:43:52','2017-10-14 12:43:52');
 INSERT INTO `terms` VALUES (8,'1507984947.jpg','shirt','2017-10-14 16:42:27','2017-10-14 16:42:27');
@@ -179,6 +179,9 @@ INSERT INTO `terms` VALUES (128,'1510316781.jpg','salt','2017-11-10 17:26:21','2
 INSERT INTO `terms` VALUES (129,'1510317532.png','charger','2017-11-10 17:38:52','2017-11-10 17:38:52');
 INSERT INTO `terms` VALUES (130,'1510320576.jpg','sponge','2017-11-10 18:29:36','2017-11-10 18:29:36');
 INSERT INTO `terms` VALUES (131,'1510322043.jpg','finger','2017-11-10 18:54:03','2017-11-10 18:54:03');
+INSERT INTO `terms` VALUES (132,'1511920053.jpg','boot','2017-11-29 06:47:34','2017-11-29 06:47:34');
+INSERT INTO `terms` VALUES (133,'1511921721.jpg','wall','2017-11-29 07:15:22','2017-11-29 07:15:22');
+INSERT INTO `terms` VALUES (134,'1511922400.jpg','boat','2017-11-29 07:26:40','2017-11-29 07:26:40');
 DROP TABLE IF EXISTS `vocabulary`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -192,7 +195,7 @@ CREATE TABLE `vocabulary` (
   PRIMARY KEY (`id`),
   KEY `vocabulary_language_id_index` (`language_id`),
   KEY `vocabulary_term_id_index` (`term_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=286 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=292 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 INSERT INTO `vocabulary` VALUES (3,'la balle',3,3,'2017-10-14 12:26:59','2017-10-14 12:26:59');
 INSERT INTO `vocabulary` VALUES (4,'der Ball',2,3,'2017-10-14 12:27:34','2017-10-14 12:27:34');
@@ -461,3 +464,9 @@ INSERT INTO `vocabulary` VALUES (282,'éponge (f)',3,130,'2017-11-10 18:30:15','
 INSERT INTO `vocabulary` VALUES (283,'der Schwamm',2,130,'2017-11-10 18:30:34','2017-11-10 18:30:34');
 INSERT INTO `vocabulary` VALUES (284,'le doigt',3,131,'2017-11-10 18:55:23','2017-11-10 18:55:23');
 INSERT INTO `vocabulary` VALUES (285,'die Finger',2,131,'2017-11-10 18:55:36','2017-11-10 18:55:36');
+INSERT INTO `vocabulary` VALUES (286,'der Stiefel',2,132,'2017-11-29 06:52:21','2017-11-29 06:52:21');
+INSERT INTO `vocabulary` VALUES (287,'la botte',3,132,'2017-11-29 06:52:40','2017-11-29 06:52:40');
+INSERT INTO `vocabulary` VALUES (288,'le mur',3,133,'2017-11-29 07:15:51','2017-11-29 07:15:51');
+INSERT INTO `vocabulary` VALUES (289,'die Wand',2,133,'2017-11-29 07:16:11','2017-11-29 07:16:11');
+INSERT INTO `vocabulary` VALUES (290,'le bateau',3,134,'2017-11-29 07:27:51','2017-11-29 07:27:51');
+INSERT INTO `vocabulary` VALUES (291,'das Boot',2,134,'2017-11-29 07:30:26','2017-11-29 07:30:26');
