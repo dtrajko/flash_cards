@@ -29,7 +29,8 @@ class Card extends Model
         $language = Language::where('enabled', 1)->inRandomOrder()->first();
         $voc_options_random = Vocabulary::select('vocabulary.*')
             ->join('languages', 'languages.id', '=', 'vocabulary.language_id')
-            ->where('languages.enabled', 1)
+	    ->where('languages.enabled', 1)
+	    ->where('languages.name', $language->name)
             ->orderByRaw('RAND()')->limit(self::OPTIONS_OFFERED)->get();
 
         $voc_option_correct = Vocabulary::select('vocabulary.*')
