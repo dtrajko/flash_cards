@@ -44,7 +44,7 @@ CREATE TABLE `settings` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 INSERT INTO `settings` VALUES (1,'score','0','2017-10-22 20:28:25','2017-12-14 13:49:16');
 INSERT INTO `settings` VALUES (2,'score_total','500','2017-10-22 20:28:25','2017-11-05 18:05:06');
-INSERT INTO `settings` VALUES (3,'version','1.0.31.142','2017-11-29 17:36:25','2017-11-29 17:36:25');
+INSERT INTO `settings` VALUES (3,'version','1.0.33.155','2017-11-29 17:36:25','2017-11-29 17:36:25');
 DROP TABLE IF EXISTS `terms`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
