@@ -49,7 +49,7 @@
                     <li class="list-group-item">
                         {{ $voc_item->id }} |
                         <span class="vocabulary_translation">{{ $voc_item->translation }}</span> |
-                        {{ $voc_item->term->name }} |
+                        <a href="/terms/details/{{ $voc_item->term->id }}">{{ $voc_item->term->name }}</a> |
                         {{ $voc_item->language->name }} |
                         <a href="/vocabulary/display/{{ $voc_item->id }}">Edit</a> |
                         <a href="/vocabulary/delete/{{ $voc_item->id }}">Delete</a>

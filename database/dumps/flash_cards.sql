@@ -12,8 +12,8 @@ CREATE TABLE `languages` (
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 INSERT INTO `languages` VALUES (1,'English','1507986818.jpg',0,'2017-10-14 17:13:38','2017-10-25 20:58:24');
-INSERT INTO `languages` VALUES (2,'Deutsch','1507986518.jpg',1,'2017-10-14 17:08:38','2017-10-26 01:22:42');
-INSERT INTO `languages` VALUES (3,'Français','1507986530.jpg',1,'2017-10-14 17:08:50','2017-11-10 16:30:39');
+INSERT INTO `languages` VALUES (2,'Deutsch','1507986518.jpg',1,'2017-10-14 17:08:38','2017-12-02 11:08:22');
+INSERT INTO `languages` VALUES (3,'Français','1507986530.jpg',1,'2017-10-14 17:08:50','2017-12-02 11:08:23');
 INSERT INTO `languages` VALUES (9,'Српски','1507989268.jpg',0,'2017-10-14 17:54:28','2017-10-21 13:00:22');
 DROP TABLE IF EXISTS `migrations`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -42,9 +42,9 @@ CREATE TABLE `settings` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `settings` VALUES (1,'score','0','2017-10-22 20:28:25','2017-11-29 22:37:17');
+INSERT INTO `settings` VALUES (1,'score','0','2017-10-22 20:28:25','2017-12-14 13:49:16');
 INSERT INTO `settings` VALUES (2,'score_total','500','2017-10-22 20:28:25','2017-11-05 18:05:06');
-INSERT INTO `settings` VALUES (3,'version','0.1.28','2017-11-29 17:36:25','2017-11-29 17:36:25');
+INSERT INTO `settings` VALUES (3,'version','1.0.31.142','2017-11-29 17:36:25','2017-11-29 17:36:25');
 DROP TABLE IF EXISTS `terms`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -55,7 +55,7 @@ CREATE TABLE `terms` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=139 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=164 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 INSERT INTO `terms` VALUES (3,'1508618234.jpg','ball','2017-10-14 12:18:48','2017-10-22 00:37:14');
 INSERT INTO `terms` VALUES (5,'1511660456.jpg','fork','2017-10-14 12:40:48','2017-11-26 06:40:56');
@@ -187,6 +187,31 @@ INSERT INTO `terms` VALUES (135,'1511926353.png','butterfly','2017-11-29 08:32:3
 INSERT INTO `terms` VALUES (136,'1511926900.jpg','shark','2017-11-29 08:41:40','2017-11-29 08:41:40');
 INSERT INTO `terms` VALUES (137,'1511975994.jpg','wave','2017-11-29 22:19:54','2017-11-29 22:19:54');
 INSERT INTO `terms` VALUES (138,'1511976365.jpg','road','2017-11-29 22:26:05','2017-11-29 22:26:05');
+INSERT INTO `terms` VALUES (139,'1512194306.jpg','earth','2017-12-02 10:58:26','2017-12-02 10:58:26');
+INSERT INTO `terms` VALUES (140,'1512195528.jpg','exit','2017-12-02 11:18:48','2017-12-02 11:18:48');
+INSERT INTO `terms` VALUES (141,'1512196122.jpg','bathtub','2017-12-02 11:28:42','2017-12-02 11:28:42');
+INSERT INTO `terms` VALUES (142,'1512196889.jpg','beard','2017-12-02 11:34:41','2017-12-02 11:41:29');
+INSERT INTO `terms` VALUES (143,'1512197538.jpg','brush','2017-12-02 11:52:18','2017-12-02 11:52:18');
+INSERT INTO `terms` VALUES (144,'1512198381.jpg','owl','2017-12-02 12:06:21','2017-12-02 12:06:21');
+INSERT INTO `terms` VALUES (145,'1512198942.jpg','money','2017-12-02 12:15:42','2017-12-02 12:15:42');
+INSERT INTO `terms` VALUES (146,'1512199350.jpg','neck','2017-12-02 12:22:30','2017-12-02 12:22:30');
+INSERT INTO `terms` VALUES (147,'1512199735.png','scarf','2017-12-02 12:28:55','2017-12-02 12:28:55');
+INSERT INTO `terms` VALUES (148,'1512200109.jpg','cave','2017-12-02 12:35:09','2017-12-02 12:35:09');
+INSERT INTO `terms` VALUES (149,'1512200629.jpg','church','2017-12-02 12:43:49','2017-12-02 12:43:49');
+INSERT INTO `terms` VALUES (150,'1512477687.jpg','bird','2017-12-05 17:41:27','2017-12-05 17:41:27');
+INSERT INTO `terms` VALUES (151,'1512480300.jpg','forest','2017-12-05 18:25:00','2017-12-05 18:25:00');
+INSERT INTO `terms` VALUES (152,'1512480682.jpg','curtain','2017-12-05 18:31:22','2017-12-05 18:31:22');
+INSERT INTO `terms` VALUES (153,'1512481192.jpg','tower','2017-12-05 18:39:52','2017-12-05 18:39:52');
+INSERT INTO `terms` VALUES (154,'1512485770.jpg','star','2017-12-05 19:56:10','2017-12-05 19:56:10');
+INSERT INTO `terms` VALUES (155,'1512487847.jpg','soap','2017-12-05 20:30:47','2017-12-05 20:30:47');
+INSERT INTO `terms` VALUES (156,'1512488076.jpg','mirror','2017-12-05 20:34:36','2017-12-05 20:34:36');
+INSERT INTO `terms` VALUES (157,'1512488862.jpg','stone','2017-12-05 20:47:42','2017-12-05 20:47:42');
+INSERT INTO `terms` VALUES (158,'1513241186.jpg','turtle','2017-12-14 13:46:26','2017-12-14 13:46:26');
+INSERT INTO `terms` VALUES (159,'1513241900.jpg','wallet','2017-12-14 13:58:20','2017-12-14 13:58:20');
+INSERT INTO `terms` VALUES (160,'1513242290.jpg','towel','2017-12-14 14:04:51','2017-12-14 14:04:51');
+INSERT INTO `terms` VALUES (161,'1513242688.jpg','cup','2017-12-14 14:11:28','2017-12-14 14:11:28');
+INSERT INTO `terms` VALUES (162,'1513243234.jpg','toothbrush','2017-12-14 14:20:34','2017-12-14 14:20:34');
+INSERT INTO `terms` VALUES (163,'1513243557.jpg','foot','2017-12-14 14:25:58','2017-12-14 14:25:58');
 DROP TABLE IF EXISTS `vocabulary`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -200,7 +225,7 @@ CREATE TABLE `vocabulary` (
   PRIMARY KEY (`id`),
   KEY `vocabulary_language_id_index` (`language_id`),
   KEY `vocabulary_term_id_index` (`term_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=300 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=353 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 INSERT INTO `vocabulary` VALUES (3,'la balle',3,3,'2017-10-14 12:26:59','2017-10-14 12:26:59');
 INSERT INTO `vocabulary` VALUES (4,'der Ball',2,3,'2017-10-14 12:27:34','2017-10-14 12:27:34');
@@ -483,3 +508,56 @@ INSERT INTO `vocabulary` VALUES (296,'la vague',3,137,'2017-11-29 22:20:28','201
 INSERT INTO `vocabulary` VALUES (297,'die Welle',2,137,'2017-11-29 22:20:42','2017-11-29 22:20:42');
 INSERT INTO `vocabulary` VALUES (298,'der Weg',2,138,'2017-11-29 22:29:18','2017-11-29 22:29:18');
 INSERT INTO `vocabulary` VALUES (299,'le chemin',3,138,'2017-11-29 22:31:04','2017-11-29 22:31:04');
+INSERT INTO `vocabulary` VALUES (300,'la terre',3,139,'2017-12-02 10:58:53','2017-12-02 10:58:53');
+INSERT INTO `vocabulary` VALUES (301,'die Erde',2,139,'2017-12-02 10:59:23','2017-12-02 10:59:23');
+INSERT INTO `vocabulary` VALUES (302,'der Ausgang',2,140,'2017-12-02 11:19:31','2017-12-02 11:19:31');
+INSERT INTO `vocabulary` VALUES (303,'la sortie',3,140,'2017-12-02 11:21:29','2017-12-02 11:21:29');
+INSERT INTO `vocabulary` VALUES (304,'la baignoire',3,141,'2017-12-02 11:28:59','2017-12-02 11:28:59');
+INSERT INTO `vocabulary` VALUES (305,'das Bad',2,141,'2017-12-02 11:29:10','2017-12-02 11:29:10');
+INSERT INTO `vocabulary` VALUES (306,'la barbe',3,142,'2017-12-02 11:35:07','2017-12-02 11:35:07');
+INSERT INTO `vocabulary` VALUES (307,'la brosse',3,143,'2017-12-02 11:52:42','2017-12-02 11:52:42');
+INSERT INTO `vocabulary` VALUES (308,'die Bürste',2,143,'2017-12-02 11:53:18','2017-12-02 11:53:18');
+INSERT INTO `vocabulary` VALUES (309,'die Eule',2,144,'2017-12-02 12:07:53','2017-12-02 12:07:53');
+INSERT INTO `vocabulary` VALUES (310,'la chouette',3,144,'2017-12-02 12:08:26','2017-12-02 12:08:26');
+INSERT INTO `vocabulary` VALUES (311,'le hibou',3,144,'2017-12-02 12:09:09','2017-12-02 12:09:09');
+INSERT INTO `vocabulary` VALUES (312,'argent (m)',3,145,'2017-12-02 12:16:19','2017-12-02 12:16:19');
+INSERT INTO `vocabulary` VALUES (313,'das Geld',2,145,'2017-12-02 12:16:35','2017-12-02 12:16:35');
+INSERT INTO `vocabulary` VALUES (314,'le cou',3,146,'2017-12-02 12:23:04','2017-12-02 12:23:04');
+INSERT INTO `vocabulary` VALUES (315,'der Hals',2,146,'2017-12-02 12:23:15','2017-12-02 12:23:15');
+INSERT INTO `vocabulary` VALUES (316,'der Schal',2,147,'2017-12-02 12:29:18','2017-12-02 12:29:18');
+INSERT INTO `vocabulary` VALUES (317,'écharpe (f)',3,147,'2017-12-02 12:30:01','2017-12-02 12:30:01');
+INSERT INTO `vocabulary` VALUES (318,'der Bart',2,142,'2017-12-02 12:30:32','2017-12-02 12:30:32');
+INSERT INTO `vocabulary` VALUES (319,'la grotte',3,148,'2017-12-02 12:35:34','2017-12-02 12:35:34');
+INSERT INTO `vocabulary` VALUES (320,'die Höhle',2,148,'2017-12-02 12:35:45','2017-12-02 12:35:45');
+INSERT INTO `vocabulary` VALUES (321,'église (f)',3,149,'2017-12-02 12:44:15','2017-12-02 12:44:15');
+INSERT INTO `vocabulary` VALUES (322,'die Kirche',2,149,'2017-12-02 12:44:28','2017-12-02 12:44:28');
+INSERT INTO `vocabulary` VALUES (323,'der Vogel',2,150,'2017-12-05 17:42:43','2017-12-05 17:42:43');
+INSERT INTO `vocabulary` VALUES (324,'oiseau (m)',3,150,'2017-12-05 17:42:56','2017-12-05 17:42:56');
+INSERT INTO `vocabulary` VALUES (325,'der Wald',2,151,'2017-12-05 18:25:39','2017-12-05 18:25:39');
+INSERT INTO `vocabulary` VALUES (326,'la forêt',3,151,'2017-12-05 18:25:56','2017-12-05 18:25:56');
+INSERT INTO `vocabulary` VALUES (327,'der Vorhang',2,152,'2017-12-05 18:31:44','2017-12-05 18:31:44');
+INSERT INTO `vocabulary` VALUES (328,'le rideau',3,152,'2017-12-05 18:31:59','2017-12-05 18:31:59');
+INSERT INTO `vocabulary` VALUES (329,'der Turm',2,153,'2017-12-05 18:40:09','2017-12-05 18:40:09');
+INSERT INTO `vocabulary` VALUES (330,'la tour',3,153,'2017-12-05 18:40:22','2017-12-05 18:40:22');
+INSERT INTO `vocabulary` VALUES (331,'étoile (f)',3,154,'2017-12-05 20:09:00','2017-12-05 20:09:00');
+INSERT INTO `vocabulary` VALUES (332,'der Stern',2,154,'2017-12-05 20:09:17','2017-12-05 20:09:17');
+INSERT INTO `vocabulary` VALUES (333,'die Seife',2,155,'2017-12-05 20:31:08','2017-12-05 20:31:08');
+INSERT INTO `vocabulary` VALUES (334,'le savon',3,155,'2017-12-05 20:31:22','2017-12-05 20:31:22');
+INSERT INTO `vocabulary` VALUES (335,'das Spiegel',2,156,'2017-12-05 20:35:02','2017-12-05 20:35:02');
+INSERT INTO `vocabulary` VALUES (336,'le miroir',3,156,'2017-12-05 20:35:16','2017-12-05 20:35:16');
+INSERT INTO `vocabulary` VALUES (337,'la pierre',3,157,'2017-12-05 20:48:11','2017-12-05 20:48:11');
+INSERT INTO `vocabulary` VALUES (338,'der Stein',2,157,'2017-12-05 20:48:25','2017-12-05 20:48:25');
+INSERT INTO `vocabulary` VALUES (339,'la tortue',3,158,'2017-12-14 13:47:58','2017-12-14 13:47:58');
+INSERT INTO `vocabulary` VALUES (340,'die Schildkröte',2,158,'2017-12-14 13:48:17','2017-12-14 13:48:17');
+INSERT INTO `vocabulary` VALUES (341,'le porte-monnaie',3,159,'2017-12-14 13:58:51','2017-12-14 13:58:51');
+INSERT INTO `vocabulary` VALUES (342,'die Wallet',2,159,'2017-12-14 13:59:08','2017-12-14 13:59:08');
+INSERT INTO `vocabulary` VALUES (343,'le portefeuille',3,159,'2017-12-14 13:59:27','2017-12-14 13:59:27');
+INSERT INTO `vocabulary` VALUES (344,'die Brieftasche',2,159,'2017-12-14 13:59:40','2017-12-14 13:59:40');
+INSERT INTO `vocabulary` VALUES (345,'das Handtuch',2,160,'2017-12-14 14:06:16','2017-12-14 14:06:16');
+INSERT INTO `vocabulary` VALUES (346,'la serviette',3,160,'2017-12-14 14:06:54','2017-12-14 14:06:54');
+INSERT INTO `vocabulary` VALUES (347,'la tasse',3,161,'2017-12-14 14:11:56','2017-12-14 14:11:56');
+INSERT INTO `vocabulary` VALUES (348,'die Tasse',2,161,'2017-12-14 14:12:24','2017-12-14 14:12:24');
+INSERT INTO `vocabulary` VALUES (349,'la brosse à dents',3,162,'2017-12-14 14:21:15','2017-12-14 14:21:15');
+INSERT INTO `vocabulary` VALUES (350,'die Zahnbürste',2,162,'2017-12-14 14:21:30','2017-12-14 14:21:30');
+INSERT INTO `vocabulary` VALUES (351,'der Fuß',2,163,'2017-12-14 14:27:01','2017-12-14 14:27:01');
+INSERT INTO `vocabulary` VALUES (352,'le pied',3,163,'2017-12-14 14:27:47','2017-12-14 14:27:47');
