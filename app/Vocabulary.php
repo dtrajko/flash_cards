@@ -60,4 +60,17 @@ class Vocabulary extends Model
         }
         return $voc_options_result;
     }
+    
+    public function search($keyword)
+    {
+        if (empty($keyword)) return [];
+
+        $results = Vocabulary::select('vocabulary.id', 'translation', 'name', 'language_id', 'term_id')
+            ->join('terms', 'term_id', '=', 'terms.id')
+            ->where('translation', 'like', "%" . $keyword . "%")
+	    ->orWhere('name', 'like', "%" . $keyword . "%")
+            ->orderBy('translation')
+            ->get();
+        return $results;
+    }
 }

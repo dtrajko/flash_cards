@@ -92,4 +92,14 @@ class VocabularyController extends Controller
         $vocabulary->save();
         return back();
     }
+
+    public function search($keyword = null)
+    {
+        if ($keyword == null) $results = new \Illuminate\Database\Eloquent\Collection;
+        else {
+            $vocabulary = new Vocabulary;
+            $results = $vocabulary->search($keyword);
+        }
+        return view('vocabulary.search')->with(['keyword' => $keyword, 'results' => $results]);
+    }
 }

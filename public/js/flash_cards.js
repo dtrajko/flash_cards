@@ -80,3 +80,16 @@ $("[id^=expand_collapse_button]").click(function() {
 $('#history_back').click(function() {
     window.history.back();
 });
+
+$('#search_field').focus();
+var tmpStr = $('#search_field').val();
+$('#search_field').val('');
+$('#search_field').val(tmpStr);
+
+$('#search_field').change(function(e) {
+    window.location.replace('/vocabulary/search/' + this.value);
+});
+
+$('#search_form').submit(function(e) {
+    e.preventDefault();
+});

@@ -28,6 +28,11 @@
                     </a>
                 </li>
                 <li class="list-group-item menu_item">
+                    <a href="/vocabulary/search">
+                        <div class="menu_item_div">Search</div>
+                    </a>
+                </li>
+                <li class="list-group-item menu_item">
                     <a href="/cards">
                         <div class="menu_item_div">Play Cards</div>
                     </a>
