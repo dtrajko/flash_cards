@@ -9,6 +9,7 @@ use App\Settings;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
+use \Illuminate\Database\Eloquent\Collection as Collection;
 
 class VocabularyController extends Controller
 {
@@ -95,8 +96,9 @@ class VocabularyController extends Controller
 
     public function search($keyword = null)
     {
-        if ($keyword == null) $results = new \Illuminate\Database\Eloquent\Collection;
-        else {
+        if ($keyword == null) {
+            $results = new Collection;
+        } else {
             $vocabulary = new Vocabulary;
             $results = $vocabulary->search($keyword);
         }
