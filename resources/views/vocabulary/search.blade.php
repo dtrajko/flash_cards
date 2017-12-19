@@ -10,7 +10,7 @@
         <div class="col-md-6 col-md-offset-3">
 
             <div class="page_section_separator"></div>
-            
+
             <div>
                 <form id="search_form" method="GET" action="/vocabulary/search/">
                     <div class="form-group" style="text-align: left">
@@ -20,9 +20,9 @@
                     {{ csrf_field() }}
                 </form>
             </div>
-            
+
             <div class="page_section_separator"></div>
-            
+
             <ul class="list-group">
                 @foreach ($results as $voc_item)
                     <li class="list-group-item">
