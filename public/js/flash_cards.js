@@ -86,9 +86,20 @@ var tmpStr = $('#search_field').val();
 $('#search_field').val('');
 $('#search_field').val(tmpStr);
 
-$('#search_field').change(function(e) {
-    window.location.replace('/vocabulary/search/' + this.value);
+$('#search_field').keyup(function(e) {
+    switch (e.which) {
+        case 37:
+        case 39:
+        case 16:
+            break;
+        default:
+            onChangeSearchBox(this.value);
+    }
 });
+
+onChangeSearchBox = function(keyword) {
+    window.location.replace('/vocabulary/search/' + keyword);
+}
 
 $('#search_form').submit(function(e) {
     e.preventDefault();
