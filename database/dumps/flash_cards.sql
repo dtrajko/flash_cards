@@ -55,7 +55,7 @@ CREATE TABLE `terms` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=185 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=186 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 INSERT INTO `terms` VALUES (3,'1508618234.jpg','ball','2017-10-14 12:18:48','2017-10-22 00:37:14');
 INSERT INTO `terms` VALUES (5,'1511660456.jpg','fork','2017-10-14 12:40:48','2017-11-26 06:40:56');
@@ -233,6 +233,7 @@ INSERT INTO `terms` VALUES (181,'1514939582.jpg','map','2018-01-03 05:33:02','20
 INSERT INTO `terms` VALUES (182,'1514940000.jpg','toothpaste','2018-01-03 05:40:01','2018-01-03 05:40:01');
 INSERT INTO `terms` VALUES (183,'1514940510.jpg','pig','2018-01-03 05:48:30','2018-01-03 05:48:30');
 INSERT INTO `terms` VALUES (184,'1514940699.jpg','airport','2018-01-03 05:51:40','2018-01-03 05:51:40');
+INSERT INTO `terms` VALUES (185,'1514941117.jpg','tea','2018-01-03 05:58:37','2018-01-03 05:58:37');
 DROP TABLE IF EXISTS `vocabulary`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -246,7 +247,7 @@ CREATE TABLE `vocabulary` (
   PRIMARY KEY (`id`),
   KEY `vocabulary_language_id_index` (`language_id`),
   KEY `vocabulary_term_id_index` (`term_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=397 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=399 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 INSERT INTO `vocabulary` VALUES (3,'la balle',3,3,'2017-10-14 12:26:59','2017-10-14 12:26:59');
 INSERT INTO `vocabulary` VALUES (4,'der Ball',2,3,'2017-10-14 12:27:34','2017-10-14 12:27:34');
@@ -626,3 +627,5 @@ INSERT INTO `vocabulary` VALUES (393,'le cochon',3,183,'2018-01-03 05:49:01','20
 INSERT INTO `vocabulary` VALUES (394,'das Schwein',2,183,'2018-01-03 05:49:23','2018-01-03 05:49:23');
 INSERT INTO `vocabulary` VALUES (395,'aéroport (m)',3,184,'2018-01-03 05:51:59','2018-01-03 05:51:59');
 INSERT INTO `vocabulary` VALUES (396,'die Flughafen',2,184,'2018-01-03 05:52:09','2018-01-03 05:52:09');
+INSERT INTO `vocabulary` VALUES (397,'le thé',3,185,'2018-01-03 05:59:01','2018-01-03 05:59:01');
+INSERT INTO `vocabulary` VALUES (398,'der Tee',2,185,'2018-01-03 05:59:12','2018-01-03 05:59:12');
