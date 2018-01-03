@@ -55,7 +55,7 @@ CREATE TABLE `terms` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=179 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=185 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 INSERT INTO `terms` VALUES (3,'1508618234.jpg','ball','2017-10-14 12:18:48','2017-10-22 00:37:14');
 INSERT INTO `terms` VALUES (5,'1511660456.jpg','fork','2017-10-14 12:40:48','2017-11-26 06:40:56');
@@ -227,6 +227,12 @@ INSERT INTO `terms` VALUES (175,'1513493218.png','apricot','2017-12-17 11:46:59'
 INSERT INTO `terms` VALUES (176,'1513493522.png','peach','2017-12-17 11:52:02','2017-12-17 11:52:02');
 INSERT INTO `terms` VALUES (177,'1513494532.jpg','pasta','2017-12-17 12:08:52','2017-12-17 12:08:52');
 INSERT INTO `terms` VALUES (178,'1513559021.jpg','wardrobe','2017-12-18 06:03:41','2017-12-18 06:03:41');
+INSERT INTO `terms` VALUES (179,'1514938852.jpg','lightbulb','2018-01-03 05:20:52','2018-01-03 05:20:52');
+INSERT INTO `terms` VALUES (180,'1514939155.jpg','coffee','2018-01-03 05:25:55','2018-01-03 05:25:55');
+INSERT INTO `terms` VALUES (181,'1514939582.jpg','map','2018-01-03 05:33:02','2018-01-03 05:33:02');
+INSERT INTO `terms` VALUES (182,'1514940000.jpg','toothpaste','2018-01-03 05:40:01','2018-01-03 05:40:01');
+INSERT INTO `terms` VALUES (183,'1514940510.jpg','pig','2018-01-03 05:48:30','2018-01-03 05:48:30');
+INSERT INTO `terms` VALUES (184,'1514940699.jpg','airport','2018-01-03 05:51:40','2018-01-03 05:51:40');
 DROP TABLE IF EXISTS `vocabulary`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -240,7 +246,7 @@ CREATE TABLE `vocabulary` (
   PRIMARY KEY (`id`),
   KEY `vocabulary_language_id_index` (`language_id`),
   KEY `vocabulary_term_id_index` (`term_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=385 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=397 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 INSERT INTO `vocabulary` VALUES (3,'la balle',3,3,'2017-10-14 12:26:59','2017-10-14 12:26:59');
 INSERT INTO `vocabulary` VALUES (4,'der Ball',2,3,'2017-10-14 12:27:34','2017-10-14 12:27:34');
@@ -601,10 +607,22 @@ INSERT INTO `vocabulary` VALUES (374,'la confiture',3,173,'2017-12-17 11:37:02',
 INSERT INTO `vocabulary` VALUES (375,'la fraise',3,174,'2017-12-17 11:43:44','2017-12-17 11:43:44');
 INSERT INTO `vocabulary` VALUES (376,'die Erdbeere',2,174,'2017-12-17 11:43:56','2017-12-17 11:43:56');
 INSERT INTO `vocabulary` VALUES (377,'die Aprikose',2,175,'2017-12-17 11:48:08','2017-12-17 11:48:08');
-INSERT INTO `vocabulary` VALUES (378,'le abricot',3,175,'2017-12-17 11:48:40','2017-12-17 11:48:40');
+INSERT INTO `vocabulary` VALUES (378,'abricot (m)',3,175,'2017-12-17 11:48:40','2018-01-03 05:22:41');
 INSERT INTO `vocabulary` VALUES (379,'la pêche',3,176,'2017-12-17 11:52:51','2017-12-17 11:52:51');
 INSERT INTO `vocabulary` VALUES (380,'der Pfirsich',2,176,'2017-12-17 11:53:03','2017-12-17 11:53:03');
 INSERT INTO `vocabulary` VALUES (381,'die Nudeln',2,177,'2017-12-17 12:09:18','2017-12-17 12:09:18');
 INSERT INTO `vocabulary` VALUES (382,'les pâtes',3,177,'2017-12-17 12:10:08','2017-12-17 12:10:08');
 INSERT INTO `vocabulary` VALUES (383,'der Schrank',2,178,'2017-12-18 06:04:00','2017-12-18 06:04:00');
 INSERT INTO `vocabulary` VALUES (384,'armoire (f)',3,178,'2017-12-18 06:04:21','2017-12-18 06:04:21');
+INSERT INTO `vocabulary` VALUES (385,'die Glühbirne',2,179,'2018-01-03 05:21:41','2018-01-03 05:21:41');
+INSERT INTO `vocabulary` VALUES (386,'ampoule (f)',3,179,'2018-01-03 05:22:03','2018-01-03 05:22:03');
+INSERT INTO `vocabulary` VALUES (387,'le café',3,180,'2018-01-03 05:26:30','2018-01-03 05:26:30');
+INSERT INTO `vocabulary` VALUES (388,'der Kaffee',2,180,'2018-01-03 05:26:42','2018-01-03 05:26:42');
+INSERT INTO `vocabulary` VALUES (389,'la carte',3,181,'2018-01-03 05:33:28','2018-01-03 05:33:28');
+INSERT INTO `vocabulary` VALUES (390,'die Landkarte',2,181,'2018-01-03 05:35:31','2018-01-03 05:35:31');
+INSERT INTO `vocabulary` VALUES (391,'die Zahnpasta',2,182,'2018-01-03 05:40:27','2018-01-03 05:40:27');
+INSERT INTO `vocabulary` VALUES (392,'le dentifrice',3,182,'2018-01-03 05:40:48','2018-01-03 05:40:48');
+INSERT INTO `vocabulary` VALUES (393,'le cochon',3,183,'2018-01-03 05:49:01','2018-01-03 05:49:01');
+INSERT INTO `vocabulary` VALUES (394,'das Schwein',2,183,'2018-01-03 05:49:23','2018-01-03 05:49:23');
+INSERT INTO `vocabulary` VALUES (395,'aéroport (m)',3,184,'2018-01-03 05:51:59','2018-01-03 05:51:59');
+INSERT INTO `vocabulary` VALUES (396,'die Flughafen',2,184,'2018-01-03 05:52:09','2018-01-03 05:52:09');
