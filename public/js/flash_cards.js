@@ -106,8 +106,8 @@ $('#search_form').submit(function(e) {
 });
 
 this.imagePreview = function(image) {
-    var offsetX = 10;
-    var offsetY = 10;
+    var offsetX = 5;
+    var offsetY = 5;
     isMouseAboveImg = function(image, e) {
         var result = true;
         var mouse_x = Math.round(e.pageX);
