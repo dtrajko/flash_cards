@@ -42,6 +42,7 @@ Route::post('/vocabulary/create', 'VocabularyController@create');
 Route::post('/vocabulary/verify', 'VocabularyController@verify');
 Route::get('/vocabulary/display/{vocabulary}', 'VocabularyController@display');
 Route::post('/vocabulary/update/{vocabulary}', 'VocabularyController@update');
+Route::get('/vocabulary/search_form', 'VocabularyController@search_form');
 Route::get('/vocabulary/search/{keyword?}', 'VocabularyController@search');
 
 Route::get('/settings/update_score/{outcome}', 'SettingsController@update_score');

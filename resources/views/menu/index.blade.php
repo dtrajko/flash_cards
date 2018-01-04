@@ -28,7 +28,7 @@
                     </a>
                 </li>
                 <li class="list-group-item menu_item">
-                    <a href="/vocabulary/search">
+                    <a href="/vocabulary/search_form">
                         <div class="menu_item_div">Search</div>
                     </a>
                 </li>

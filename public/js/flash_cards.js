@@ -98,9 +98,53 @@ $('#search_field').keyup(function(e) {
 });
 
 onChangeSearchBox = function(keyword) {
-    window.location.replace('/vocabulary/search/' + keyword);
-}
+    $("#search_results").load('/vocabulary/search/' + keyword);
+};
 
 $('#search_form').submit(function(e) {
     e.preventDefault();
+});
+
+this.imagePreview = function(image) {
+    var offsetX = 10;
+    var offsetY = 10;
+    isMouseAboveImg = function(image, e) {
+        var result = true;
+        var mouse_x = Math.round(e.pageX);
+        var mouse_y = Math.round(e.pageY);
+        var image_offset = image.offset();
+        var image_x = Math.round(image_offset.left);
+        var image_y = Math.round(image_offset.top);
+        var image_w = image.width();
+        var image_h = image.height();
+        if (mouse_x < image_x || mouse_x >= image_x + image_w ||
+            mouse_y < image_y || mouse_y >= image_y + image_h) {
+            result = false;
+        }
+        console.log('MX=' + mouse_x + ' | MY=' + mouse_y + ' | IX=' + image_x + ' | IY=' + image_y + ' | IW=' + image_w + ' | IH=' + image_h + ' | Result=' + result);
+        return result;
+    }
+    image.mouseenter(function(e){
+        if (isMouseAboveImg(image, e) && !$("#preview_photo_jq").length) {
+            // console.log('mouseenter | e.pageX = ' + e.pageX + ' | e.pageY = ' + e.pageY);
+            $("#content_container").append('<img id="preview_photo_jq" src="' + this.src + '" />');
+            $("#preview_photo_jq").css({ top: (e.pageY + offsetY), left: (e.pageX + offsetX), position: 'absolute' });
+            $("#preview_photo_jq").fadeIn("fast");
+        }
+    });
+    image.mouseleave(function(e){
+        if (!isMouseAboveImg(image, e) && $("#preview_photo_jq").length) {
+            // console.log('mouseleave | e.pageX = ' + e.pageX + ' | e.pageY = ' + e.pageY);
+            $("#preview_photo_jq").remove();
+        }
+    });
+    image.mousemove(function(e){
+        // console.log('mousemove | e.pageX = ' + e.pageX + ' | e.pageY = ' + e.pageY);
+        $("#preview_photo_jq").css({ top: (e.pageY + offsetY), left: (e.pageX + offsetX), position: 'absolute' });
+    });
+};
+
+// starting the script on page load
+$(document).ready(function(){
+	imagePreview($('#term_image'));
 });

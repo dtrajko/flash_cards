@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <div class="container">
+        <div id="content_container" class="container">
             @yield('content')
         </div>
 

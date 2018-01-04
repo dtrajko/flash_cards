@@ -94,6 +94,11 @@ class VocabularyController extends Controller
         return back();
     }
 
+    public function search_form()
+    {
+        return view('vocabulary.search_form');
+    }
+
     public function search($keyword = null)
     {
         if ($keyword == null) {

@@ -199,6 +199,7 @@ h3 {
   float: right;
   padding: 2px;
   border: thin solid #d3e0e9;
+  overflow: auto;
 }
 
 .thumb_inner_div {
@@ -259,4 +260,8 @@ h3 {
 .page_section_separator {
   width: inherit;
   height: 1em;
+}
+
+#preview_photo_jq {
+    border: thin solid #d3e0e9;
 }
