@@ -121,7 +121,7 @@ this.imagePreview = function(image) {
             mouse_y < image_y || mouse_y >= image_y + image_h) {
             result = false;
         }
-        console.log('MX=' + mouse_x + ' | MY=' + mouse_y + ' | IX=' + image_x + ' | IY=' + image_y + ' | IW=' + image_w + ' | IH=' + image_h + ' | Result=' + result);
+        // console.log('MX=' + mouse_x + ' | MY=' + mouse_y + ' | IX=' + image_x + ' | IY=' + image_y + ' | IW=' + image_w + ' | IH=' + image_h + ' | Result=' + result);
         return result;
     }
     image.mouseenter(function(e){
