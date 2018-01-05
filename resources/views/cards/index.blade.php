@@ -6,7 +6,7 @@
             <a href="/">Back to menu</a>
         </div>
         <div style="float: right; line-height: 1.6em; padding-top: 0.2em">
-            <span class="score_bar">Score: {{ $settings['score']->value }} | Best score: {{ $settings['score_total']->value }}</span>
+            <span class="score_bar">Score: {{ $settings['score']->value }} | High score: {{ $settings['score_total']->value }}</span>
         </div>
     </div>
 @stop
