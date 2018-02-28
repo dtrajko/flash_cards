@@ -42,9 +42,9 @@ CREATE TABLE `settings` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `settings` VALUES (1,'score','0','2017-10-22 20:28:25','2018-01-28 00:24:42');
+INSERT INTO `settings` VALUES (1,'score','0','2017-10-22 20:28:25','2018-03-01 03:12:42');
 INSERT INTO `settings` VALUES (2,'score_total','24','2017-10-22 20:28:25','2017-12-16 20:54:36');
-INSERT INTO `settings` VALUES (3,'version','1.0.44.200','2017-11-29 17:36:25','2017-11-29 17:36:25');
+INSERT INTO `settings` VALUES (3,'version','1.0.68.204','2017-11-29 17:36:25','2017-11-29 17:36:25');
 DROP TABLE IF EXISTS `terms`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -55,7 +55,7 @@ CREATE TABLE `terms` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=210 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=213 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 INSERT INTO `terms` VALUES (3,'1508618234.jpg','ball','2017-10-14 12:18:48','2017-10-22 00:37:14');
 INSERT INTO `terms` VALUES (5,'1511660456.jpg','fork','2017-10-14 12:40:48','2017-11-26 06:40:56');
@@ -258,6 +258,9 @@ INSERT INTO `terms` VALUES (206,'1517079064.jpg','oil','2018-01-27 23:51:04','20
 INSERT INTO `terms` VALUES (207,'1517079675.jpg','feather','2018-01-28 00:01:15','2018-01-28 00:01:15');
 INSERT INTO `terms` VALUES (208,'1517082254.jpg','menu','2018-01-28 00:22:14','2018-01-28 00:44:14');
 INSERT INTO `terms` VALUES (209,'1517185257.png','refrigerator','2018-01-29 05:18:01','2018-01-29 05:20:58');
+INSERT INTO `terms` VALUES (210,'1517186951.jpg','prison','2018-01-29 05:49:11','2018-01-29 05:49:11');
+INSERT INTO `terms` VALUES (211,'1519337543.jpg','gas station','2018-02-23 03:12:23','2018-02-23 03:12:23');
+INSERT INTO `terms` VALUES (212,'1519855790.jpg','bee','2018-03-01 03:01:27','2018-03-01 03:09:50');
 DROP TABLE IF EXISTS `vocabulary`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -271,7 +274,7 @@ CREATE TABLE `vocabulary` (
   PRIMARY KEY (`id`),
   KEY `vocabulary_language_id_index` (`language_id`),
   KEY `vocabulary_term_id_index` (`term_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=448 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=454 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 INSERT INTO `vocabulary` VALUES (3,'la balle',3,3,'2017-10-14 12:26:59','2017-10-14 12:26:59');
 INSERT INTO `vocabulary` VALUES (4,'der Ball',2,3,'2017-10-14 12:27:34','2017-10-14 12:27:34');
@@ -702,3 +705,9 @@ INSERT INTO `vocabulary` VALUES (444,'le menu',3,208,'2018-01-28 00:23:13','2018
 INSERT INTO `vocabulary` VALUES (445,'la carte',3,208,'2018-01-28 00:23:28','2018-01-28 00:23:28');
 INSERT INTO `vocabulary` VALUES (446,'le réfrigérateur',3,209,'2018-01-29 05:18:56','2018-01-29 05:18:56');
 INSERT INTO `vocabulary` VALUES (447,'der Kühlschrank',2,209,'2018-01-29 05:19:08','2018-01-29 05:19:08');
+INSERT INTO `vocabulary` VALUES (448,'la prison',3,210,'2018-01-29 05:49:49','2018-01-29 05:49:49');
+INSERT INTO `vocabulary` VALUES (449,'das Gefängnis',2,210,'2018-01-29 05:50:06','2018-01-29 05:50:06');
+INSERT INTO `vocabulary` VALUES (450,'die Tankstelle',2,211,'2018-02-23 03:12:56','2018-02-23 03:12:56');
+INSERT INTO `vocabulary` VALUES (451,'la station-service',3,211,'2018-02-23 03:13:14','2018-02-23 03:13:14');
+INSERT INTO `vocabulary` VALUES (452,'abeille (f)',3,212,'2018-03-01 03:10:09','2018-03-01 03:10:09');
+INSERT INTO `vocabulary` VALUES (453,'die Biene',2,212,'2018-03-01 03:10:43','2018-03-01 03:10:43');

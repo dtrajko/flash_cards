@@ -18,9 +18,11 @@
                     {{ $term->picture }} |
                     <a href="/terms/delete/{{ $term->id }}" class="delete_confirm">Delete</a>
                 </div>
+                @if ($term->picture)
                 <div style="float: right" class="thumb_outer_div">
                     <img id="term_image" src="/images/terms/{{ $term->picture }}" height="100px" />
                 </div>
+                @endif
             </div>
 
             <h3 id="expand_collapse_button_1" class="expand_collapse_button">
